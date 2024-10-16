@@ -16,6 +16,7 @@
     "@fontsource-variable/cabin": "^5.0.20",
     "@fontsource-variable/lexend-deca": "^5.1.0",
     "@fontsource/poppins": "^5.0.15",
+    "@fontsource/source-serif-pro": "^5.1.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.5.4",
     "popmotion": "^11.0.5",

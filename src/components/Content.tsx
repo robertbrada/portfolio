@@ -5,8 +5,17 @@ import { PersonalPage } from "./PersonalPage";
 // import trezor from "./assets/images/trezor/chart.png";
 import { useEffect, useState } from "react";
 import images from "../image-data";
+import descriptions from "../description-data";
 import { Gallery } from "./Gallery";
+import { XLogo } from "./XLogo";
+import { GithubLogo } from "./GithubLogo";
+import { YouTubeLogo } from "./YouTubeLogo";
+import { MediumLogo } from "./MediumLogo";
+import { WebsiteIcon } from "./WebsiteIcon";
+import { LoomLogo } from "./LoomLogo";
 
+const aIconClass =
+  "hover:text-slate-600 rounded-full hover:scale-[1.02] duration-100 transition-transform flex items-center gap-2 text-sm";
 // export const images: Record<Project, string[]> = {
 //   [Project.RobertBrada]: [
 //       "https://d33wubrfki0l68.cloudfront.net/dd23708ebc4053551bb33e18b7174e73b6e1710b/dea24/static/images/wallpapers/shared-colors@2x.png",
@@ -81,10 +90,79 @@ export function Content({ selectedProject }: ContentProps) {
           </div>
         )}
       </div>
-      <p id="description" className="text-text-secondary mb-6">
-        Staking tool which automatically distributes stake in a decentralized
-        way. It gives more stake to understaked validators.
-      </p>
+      <div
+        id="description"
+        className="text-text-secondary mb-6 grid grid-cols-3 gap-10"
+      >
+        <div className="col-span-2">{descriptions[selectedProject]}</div>
+        <div className="col-span-1  p-4 rounded-lg h-min bg-slate-100 mt-2">
+          <div className="text-xs mb-3">References</div>
+          <ul>
+            <li>
+              <a
+                href="https://x.com/0xrbrada"
+                target="_blank"
+                className={aIconClass}
+              >
+                <XLogo
+                  className={`h-[0.68rem]  w-[1rem] display:inline-block cursor-pointer my-2`}
+                />
+                <span>CrocoFinance</span>
+              </a>
+              <a
+                href="https://github.com/croco-finance"
+                target="_blank"
+                className={aIconClass}
+              >
+                <GithubLogo
+                  className={`h-[0.75rem] w-[1rem] display:inline-block cursor-pointer my-2`}
+                />
+                <span>croco-finance</span>
+              </a>
+              <a
+                href="https://www.youtube.com/watch?v=MEBnPKgrtxM&t=108s"
+                target="_blank"
+                className={aIconClass}
+              >
+                <YouTubeLogo
+                  className={`h-[0.65rem] w-[1rem] display:inline-block cursor-pointer my-2`}
+                />
+                <span>Demo video</span>
+              </a>
+              <a
+                href="https://www.youtube.com/watch?v=MEBnPKgrtxM&t=108s"
+                target="_blank"
+                className={aIconClass}
+              >
+                <MediumLogo
+                  className={`h-[0.75rem] w-[1rem] display:inline-block cursor-pointer my-2`}
+                />
+                <span>Medium article</span>
+              </a>
+              <a
+                href="https://www.youtube.com/watch?v=MEBnPKgrtxM&t=108s"
+                target="_blank"
+                className={aIconClass}
+              >
+                <WebsiteIcon
+                  className={`h-[0.75rem] w-[1rem] display:inline-block cursor-pointer my-2`}
+                />
+                <span>Website</span>
+              </a>
+              <a
+                href="https://www.youtube.com/watch?v=MEBnPKgrtxM&t=108s"
+                target="_blank"
+                className={aIconClass}
+              >
+                <LoomLogo
+                  className={`h-[0.75rem] w-[1rem] display:inline-block cursor-pointer my-2`}
+                />
+                <span>Demo video</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
       <FeaturedImage
         onClick={(src) => handleOnClick(src)}
         images={images[selectedProject]}

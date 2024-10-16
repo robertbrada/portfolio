@@ -26,7 +26,7 @@ export default {
         stakebar: "#6B43EE",
         observatory: "#2FB3A3",
         sdp: "#3A61F9",
-        robert: "#238CE5",
+        robert: "#2D3748",
         croco: "#34A13C",
         trezor: "#000000",
         duo: "#238CE5",

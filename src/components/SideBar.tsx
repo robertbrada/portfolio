@@ -23,7 +23,7 @@ const colorsByProject: Record<Project, string> = {
 };
 
 const sharedClasses =
-  "my-1 py-0.5 px-2 w-fit rounded-md text-left text-sm hover:scale-[1.08] transition-all hover:font-medium duration-100";
+  "my-1 py-0.5 px-2 w-fit rounded-md text-left text-sm hover:scale-[1.08] transition-all hover:font-medium duration-100 hover:translate-y-[-1px]";
 const sharedDefault = "text-text-secondary font-normal";
 const sharedSelectedClasses = "scale-[1.08] font-medium text-white";
 
