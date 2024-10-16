@@ -1,8 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import { Content } from "./components/Content";
-import { Example } from "./components/Example";
-import { Gallery } from "./components/Gallery";
 import { SideBar } from "./components/SideBar";
 import { Project } from "./types";
 

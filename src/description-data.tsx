@@ -1,7 +1,7 @@
 import { Project } from "./types";
 
 const images: Record<Project, React.ReactNode> = {
-  [Project.Trezor]: "",
+  [Project.Trezor]: <div>This is Trezor</div>,
   [Project.CrocoFinance]: (
     <div>
       <p>
@@ -30,16 +30,16 @@ const images: Record<Project, React.ReactNode> = {
   ),
   [Project.DuoCards]: (
     <div>
-      Here I took a break from tech-oriented products and tried to to something more playful.
-      This was purely a design project where I tried to redesig landing page of
-      DuoCards.com as part of a hiring process. 
+      Here I took a break from tech-oriented products and tried to to something
+      more playful. This was purely a design project where I tried to redesig
+      landing page of DuoCards.com as part of a hiring process.
     </div>
   ),
-  [Project.Eigen]: "",
-  [Project.Observatory]: "",
-  [Project.RobertBrada]: "",
-  [Project.SDP]: "",
-  [Project.StakeBar]: "",
+  [Project.Eigen]: <div>This is EigenBeat</div>,
+  [Project.Observatory]: <div>This is Observatory</div>,
+  [Project.RobertBrada]: <div>This is RobertBrada</div>,
+  [Project.SDP]: <div>This is SDP</div>,
+  [Project.StakeBar]: <div>This is StakeBar</div>,
 };
 
 export default images;

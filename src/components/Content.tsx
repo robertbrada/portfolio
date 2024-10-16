@@ -92,10 +92,16 @@ export function Content({ selectedProject }: ContentProps) {
       </div>
       <div
         id="description"
-        className="text-text-secondary mb-6 grid grid-cols-3 gap-10"
+        className="text-text-secondary mb-6 grid grid-cols-4 gap-10"
       >
-        <div className="col-span-2">{descriptions[selectedProject]}</div>
-        <div className="col-span-1  p-4 rounded-lg h-min bg-slate-100 mt-2">
+        <div className="col-span-3">
+          <div className="mb-6">{descriptions[selectedProject]}</div>
+          <FeaturedImage
+            onClick={(src) => handleOnClick(src)}
+            images={images[selectedProject]}
+          />
+        </div>
+        <div className="col-span-1 pl-8 h-min border-l-[1px] mt-2">
           <div className="text-xs mb-3">References</div>
           <ul>
             <li>
@@ -163,18 +169,7 @@ export function Content({ selectedProject }: ContentProps) {
           </ul>
         </div>
       </div>
-      <FeaturedImage
-        onClick={(src) => handleOnClick(src)}
-        images={images[selectedProject]}
-      />
-      {/* <button
-        className="p-6 bg-blue-600 text-white"
-        onClick={() => setGalleryOpen(!galleryOpen)}
-      >
-        Gallery
-      </button> */}
 
-      {/* <Image /> */}
       {galleryOpen && (
         <div
           className={`example-container ${

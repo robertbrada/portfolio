@@ -135,7 +135,7 @@ interface SideBarProps {
 
 export function SideBar({ onSelected, selected }: SideBarProps) {
   return (
-    <aside className="h-screen sticky top-0 w-72 text-left px-4 py-4 shrink-0 flex flex-col">
+    <aside className="h-screen sticky top-0 w-64 text-left px-4 py-4 shrink-0 flex flex-col">
       <div className="border-r-[1px] py-2 h-full flex flex-col">
         <section
           className="pl-[0.5rem] pt-[1.5rem]"
