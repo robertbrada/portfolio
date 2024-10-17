@@ -1,7 +1,15 @@
 import { Project } from "./types";
 
 const images: Record<Project, React.ReactNode> = {
-  [Project.Trezor]: <div>This is Trezor</div>,
+  [Project.Trezor]: (
+    <div>
+      I joined SatoshiLabs in 2020 as a frontend developer of the web version of
+      Trezor Suite. Besides functional programming I was reading user feedback
+      and adjusting some parts of the UI according to it. On the examples
+      showcased you see refactored transaction modal, chart displaying balance
+      and device connected.
+    </div>
+  ),
   [Project.CrocoFinance]: (
     <div>
       <p>

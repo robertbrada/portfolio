@@ -1,5 +1,6 @@
 import { Project } from "../types";
-import me from "../assets/images/ja.jpg";
+// import me from "../assets/images/me-square.jpg";
+import me from "../../public/favicon-punk.svg";
 import { XLogo } from "./XLogo";
 import { LinkedinLogo } from "./LinkedinLogo";
 import { GithubLogo } from "./GithubLogo";
@@ -145,7 +146,8 @@ export function SideBar({ onSelected, selected }: SideBarProps) {
         >
           {/* <span className="font-medium text-blue-700 text-xs"> */}
           <div className="flex space-x-2 items-center">
-            <img className="w-6 h-6 rounded-full" alt="Robert Brada" src={me} />
+            <img className="w-6 h-6" alt="Robert Brada" src={me} />
+            {/* <img className="w-6 h-6 rounded-full" alt="Robert Brada" src={"/favicon-punk.svg"} /> */}
             <h1 className="font-bold text-[1.2rem] mt-[-0.1rem] text-black">
               Robert Brada
             </h1>

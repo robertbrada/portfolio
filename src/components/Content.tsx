@@ -13,6 +13,7 @@ import { YouTubeLogo } from "./YouTubeLogo";
 import { MediumLogo } from "./MediumLogo";
 import { WebsiteIcon } from "./WebsiteIcon";
 import { LoomLogo } from "./LoomLogo";
+import { ObservatoryLogo } from "./ObservatoryLogo";
 
 const aIconClass =
   "hover:text-slate-600 rounded-full hover:scale-[1.02] duration-100 transition-transform flex items-center gap-2 text-sm";
@@ -87,6 +88,7 @@ export function Content({ selectedProject }: ContentProps) {
               {selectedProject}
             </h1> */}
             <h1 className="text-4xl font-bold">{selectedProject}</h1>
+            {/* <ObservatoryLogo className="h-[2.6rem]  w-auto"/> */}
           </div>
         )}
       </div>
@@ -101,8 +103,8 @@ export function Content({ selectedProject }: ContentProps) {
             images={images[selectedProject]}
           />
         </div>
-        <div className="col-span-1 pl-8 h-min border-l-[1px] mt-2">
-          <div className="text-xs mb-3">References</div>
+        <div className="col-span-1 pl-8 h-min border-l-[1px]">
+          {/* <div className="text-xs mb-3">References</div> */}
           <ul>
             <li>
               <a
