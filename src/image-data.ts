@@ -27,7 +27,7 @@ import { Project } from "./types";
 const images: Record<Project, string[]> = {
   [Project.Trezor]: [trexorEthTx, trezorWallet, trezorChart],
   [Project.CrocoFinance]: [crocoCrocosHorizontal, crocoSimulator, crocoLanding],
-  [Project.DuoCards]: [duoOriginal, duoRedesign, duoRedesignBlue],
+  [Project.DuoCards]: [duoRedesign, duoRedesignBlue, duoOriginal],
   [Project.Eigen]: [eigenServiceDark, eigenNewsfeed, eigenOperatorFuture],
   [Project.Observatory]: [
     observatoryDashboardLight,

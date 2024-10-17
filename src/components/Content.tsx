@@ -14,16 +14,8 @@ import { MediumLogo } from "./MediumLogo";
 import { WebsiteIcon } from "./WebsiteIcon";
 import { LoomLogo } from "./LoomLogo";
 import { ObservatoryLogo } from "./ObservatoryLogo";
-
-const aIconClass =
-  "hover:text-slate-600 rounded-full hover:scale-[1.02] duration-100 transition-transform flex items-center gap-2 text-sm";
-// export const images: Record<Project, string[]> = {
-//   [Project.RobertBrada]: [
-//       "https://d33wubrfki0l68.cloudfront.net/dd23708ebc4053551bb33e18b7174e73b6e1710b/dea24/static/images/wallpapers/shared-colors@2x.png",
-//   "https://d33wubrfki0l68.cloudfront.net/49de349d12db851952c5556f3c637ca772745316/cfc56/static/images/wallpapers/bridge-02@2x.png",
-//   "https://d33wubrfki0l68.cloudfront.net/594de66469079c21fc54c14db0591305a1198dd6/3f4b1/static/images/wallpapers/bridge-01@2x.png",
-//   "https://appimage.github.io/database/Trezor_Suite/icons/512x512/trezor-suite.png",
-// }
+import { References } from "./References";
+import references from "../reference-data";
 
 const exampleImages = [
   "https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg",
@@ -104,71 +96,7 @@ export function Content({ selectedProject }: ContentProps) {
           />
         </div>
         <div className="col-span-1 pl-8 h-min border-l-[1px]">
-          {/* <div className="text-xs mb-3">References</div> */}
-          <ul>
-            <li>
-              <a
-                href="https://x.com/0xrbrada"
-                target="_blank"
-                className={aIconClass}
-              >
-                <XLogo
-                  className={`h-[0.68rem]  w-[1rem] display:inline-block cursor-pointer my-2`}
-                />
-                <span>CrocoFinance</span>
-              </a>
-              <a
-                href="https://github.com/croco-finance"
-                target="_blank"
-                className={aIconClass}
-              >
-                <GithubLogo
-                  className={`h-[0.75rem] w-[1rem] display:inline-block cursor-pointer my-2`}
-                />
-                <span>croco-finance</span>
-              </a>
-              <a
-                href="https://www.youtube.com/watch?v=MEBnPKgrtxM&t=108s"
-                target="_blank"
-                className={aIconClass}
-              >
-                <YouTubeLogo
-                  className={`h-[0.65rem] w-[1rem] display:inline-block cursor-pointer my-2`}
-                />
-                <span>Demo video</span>
-              </a>
-              <a
-                href="https://www.youtube.com/watch?v=MEBnPKgrtxM&t=108s"
-                target="_blank"
-                className={aIconClass}
-              >
-                <MediumLogo
-                  className={`h-[0.75rem] w-[1rem] display:inline-block cursor-pointer my-2`}
-                />
-                <span>Medium article</span>
-              </a>
-              <a
-                href="https://www.youtube.com/watch?v=MEBnPKgrtxM&t=108s"
-                target="_blank"
-                className={aIconClass}
-              >
-                <WebsiteIcon
-                  className={`h-[0.75rem] w-[1rem] display:inline-block cursor-pointer my-2`}
-                />
-                <span>Website</span>
-              </a>
-              <a
-                href="https://www.youtube.com/watch?v=MEBnPKgrtxM&t=108s"
-                target="_blank"
-                className={aIconClass}
-              >
-                <LoomLogo
-                  className={`h-[0.75rem] w-[1rem] display:inline-block cursor-pointer my-2`}
-                />
-                <span>Demo video</span>
-              </a>
-            </li>
-          </ul>
+          <References references={references[selectedProject]} />
         </div>
       </div>
 
