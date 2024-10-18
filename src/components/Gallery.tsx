@@ -4,6 +4,7 @@ import { wrap } from "popmotion";
 import * as React from "react";
 import { useState } from "react";
 import classes from "./Gallery.module.css";
+import { ProjectImage } from "../image-data";
 
 const variants = {
   enter: (direction: number) => {
@@ -38,7 +39,7 @@ const swipePower = (offset: number, velocity: number) => {
 };
 
 interface GalleryProps {
-  images: string[];
+  images: ProjectImage[];
   firstImage?: number;
 }
 
@@ -111,7 +112,7 @@ export const Gallery = ({ images, firstImage }: GalleryProps) => {
         >
           <img
             className={cx(classes.img, "rounded-sm")}
-            src={images[imageIndex]}
+            src={images[imageIndex].src}
           />
           {/* <div className={cx(classes.middle, "px-2 py-1 rounded-md")}>
             <div className={classes.text}>

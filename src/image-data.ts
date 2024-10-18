@@ -26,26 +26,52 @@ import trexorEthTx from "./assets/images/trezor/eth-transaction.svg";
 import trezorWallet from "./assets/images/trezor/wallet.svg";
 import { Project } from "./types";
 
-const images: Record<Project, string[]> = {
-  [Project.Trezor]: [trexorEthTx, trezorWallet, trezorChart],
-  [Project.CrocoFinance]: [
-    crocoLanding2,
-    crocoSimulator,
-    crocoCrocosHorizontal,
-    crocoPoolsV3,
-    crocoSimulatorV3,
+export interface ProjectImage {
+  src: string;
+  border: boolean;
+}
+
+const images: Record<Project, ProjectImage[]> = {
+  [Project.Trezor]: [
+    { src: trexorEthTx, border: true },
+    { src: trezorWallet, border: false },
+    { src: trezorChart, border: false },
   ],
-  [Project.DuoCards]: [duoRedesign, duoRedesignBlue, duoOriginal],
-  [Project.Eigen]: [eigenServiceDark, eigenNewsfeed, eigenOperatorFutureLight],
+  [Project.CrocoFinance]: [
+    { src: crocoLanding2, border: true },
+    { src: crocoSimulator, border: true },
+    { src: crocoCrocosHorizontal, border: true },
+    { src: crocoPoolsV3, border: true },
+    { src: crocoSimulatorV3, border: true },
+  ],
+  [Project.DuoCards]: [
+    { src: duoRedesign, border: false },
+    { src: duoRedesignBlue, border: false },
+    { src: duoOriginal, border: true },
+  ],
+  [Project.Eigen]: [
+    { src: eigenServiceDark, border: false },
+    { src: eigenNewsfeed, border: true },
+    { src: eigenOperatorFutureLight, border: true },
+  ],
   [Project.Observatory]: [
-    observatoryDashboardLight,
-    observatoryValidatorsList,
-    observatoryValidators,
-    observatoryDashboardDark,
+    { src: observatoryDashboardLight, border: false },
+    { src: observatoryValidatorsList, border: false },
+    { src: observatoryValidators, border: false },
+    { src: observatoryDashboardDark, border: false },
+  ],
+  [Project.SDP]: [
+    { src: sdpChain, border: true },
+    { src: sdpValidators, border: true },
+    { src: sdpGuide, border: true },
+  ],
+  [Project.StakeBar]: [
+    { src: stakeLandingBlue, border: false },
+    { src: stakeInput, border: false },
+    { src: stakeCheers, border: false },
+    { src: stake1, border: false },
   ],
   [Project.RobertBrada]: [],
-  [Project.SDP]: [sdpChain, sdpValidators, sdpGuide],
-  [Project.StakeBar]: [stakeLandingBlue, stakeInput, stakeCheers, stake1],
 };
 
 export default images;
