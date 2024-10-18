@@ -5,7 +5,6 @@ import cx from "clsx";
 const hoverClass = "transition-all duration-250 hover:shadow-md";
 const sharedImageClasses = "h-auto max-w-full rounded-sm cursor-zoom-in";
 const largeImageClass = `${sharedImageClasses} hover:scale-[1.01] ${hoverClass} ${classes.image}`;
-const smallImageClass = `${sharedImageClasses} hover:scale-[1.04] ${hoverClass} ${classes.image}`;
 
 interface Props {
   images: string[];

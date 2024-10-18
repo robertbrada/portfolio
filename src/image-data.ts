@@ -12,16 +12,15 @@ import observatoryDashboardLight from "./assets/images/observatory/dashboard-lig
 import observatoryValidators from "./assets/images/observatory/validators.svg";
 import sdpChain from "./assets/images/sdp/chain.svg";
 import sdpGuide from "./assets/images/sdp/guide.svg";
-import sdpLanding from "./assets/images/sdp/landing.svg";
 import sdpValidators from "./assets/images/sdp/validators.svg";
 import stakeApp from "./assets/images/stakebar/app.svg";
 import stakeCheers from "./assets/images/stakebar/cheers.svg";
 import stakeInput from "./assets/images/stakebar/input.svg";
 import stakeLandingBlue from "./assets/images/stakebar/landing-blue.svg";
 import stake2 from "./assets/images/stakebar/ui-2.png";
+import trezorChart from "./assets/images/trezor/chart.svg";
 import trexorEthTx from "./assets/images/trezor/eth-transaction.svg";
 import trezorWallet from "./assets/images/trezor/wallet.svg";
-import trezorChart from "./assets/images/trezor/chart.svg";
 import { Project } from "./types";
 
 const images: Record<Project, string[]> = {

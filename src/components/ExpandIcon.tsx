@@ -1,4 +1,3 @@
-const fill = "white";
 const stroke = "white";
 
 export function ExpandIcon({ className }: { className?: string }) {
