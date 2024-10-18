@@ -113,14 +113,14 @@ export const Gallery = ({ images, firstImage }: GalleryProps) => {
             className={cx(classes.img, "rounded-sm")}
             src={images[imageIndex]}
           />
-          <div className={cx(classes.middle, "px-2 py-1 rounded-md")}>
+          {/* <div className={cx(classes.middle, "px-2 py-1 rounded-md")}>
             <div className={classes.text}>
               <span className="font-medium mr-2">Newsfeed page:</span>
               <span className="font-light">
                 This is description of the screen presented
               </span>
             </div>
-          </div>
+          </div> */}
         </motion.div>
       </AnimatePresence>
       <div className="next" onClick={() => paginate(1)}>
