@@ -32,8 +32,8 @@ const icons: Record<ReferenceType, React.ReactNode> = {
 export const References = ({ references }: ReferencesProps) => {
   return (
     <ul>
-      <div className="text-sm mb-2 border-b-[1px] pb-2  xl:hidden">
-        Reference links
+      <div className="text-sm mb-2 border-b-[1px] pb-2 opacity-70 xl:hidden">
+        Reference links:
       </div>
       {references.map((reference, index) => (
         <li key={index} className="">

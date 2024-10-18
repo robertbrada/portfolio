@@ -2,29 +2,12 @@ import "react-medium-image-zoom/dist/styles.css";
 import { Project } from "../types";
 import { FeaturedImage } from "./FeaturedImage";
 import { PersonalPage } from "./PersonalPage";
-// import trezor from "./assets/images/trezor/chart.png";
 import { useEffect, useState } from "react";
-import images from "../image-data";
 import descriptions from "../description-data";
-import { Gallery } from "./Gallery";
-import { XLogo } from "./XLogo";
-import { GithubLogo } from "./GithubLogo";
-import { YouTubeLogo } from "./YouTubeLogo";
-import { MediumLogo } from "./MediumLogo";
-import { WebsiteIcon } from "./WebsiteIcon";
-import { LoomLogo } from "./LoomLogo";
-import { ObservatoryLogo } from "./ObservatoryLogo";
-import { References } from "./References";
+import images from "../image-data";
 import references from "../reference-data";
-
-const exampleImages = [
-  "https://flowbite.s3.amazonaws.com/docs/gallery/featured/image.jpg",
-  "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg",
-  "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg",
-  "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg",
-  "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg",
-  "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg",
-];
+import { Gallery } from "./Gallery";
+import { References } from "./References";
 
 interface ContentProps {
   selectedProject: Project;
@@ -69,8 +52,7 @@ export function Content({ selectedProject }: ContentProps) {
   }, []);
 
   return (
-    <main className="py-10 px-14 text-left">
-      {/* <XLogo className="h-2.5 w-auto display:inline-block" /> */}
+    <main className="py-4 px-4 text-left lg:py-10 lg:px-14">
       <div className={`mb-6 ${colorsByProject[selectedProject]}`}>
         {selectedProject === "Robert Brada" ? (
           <PersonalPage />
@@ -99,7 +81,9 @@ export function Content({ selectedProject }: ContentProps) {
         </div>
 
         <div className="col-span-1 pt-4 h-min xl:border-t-[0px] xl:border-l-[1px] xl:pl-8 xl:pt-0">
-          <References references={references[selectedProject]} />
+          {references[selectedProject].length ? (
+            <References references={references[selectedProject]} />
+          ) : null}
         </div>
       </div>
 

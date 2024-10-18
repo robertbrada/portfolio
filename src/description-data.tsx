@@ -109,65 +109,64 @@ const descriptions: Record<Project, React.ReactNode> = {
     </div>
   ),
   [Project.RobertBrada]: (
-    <div className="flex flex-row gap-10">
-      <div className="text-justify">
-        <p>
-          {/* Happy to see you on my portfolio page!  */}I am a software
-          developer and product designer based in Prague - Czech Republic. I
-          work mostly on frontend side of things. Creating the initial
-          wireframes and then iterating as I interact with the product. Usually
-          I work with Figma, React, Next.js. I studied Cybernetics but got
-          hooked up by crypto in 2017 and since then following that path. I
-          joined SatoShilabs in 2020 and later on started work at RockawayX
-          which is a crypto company running VC team, staking services and own
-          Labs developer studio.
-        </p>
-        <p className="mt-2">
-          Even thogh I have software background I love creating great
-          eye-catching, easy-to-use products that are a pleasure to use. On this
-          page you can see some that I designed and built either by myself or in
-          collaborations with my colleagues.
-        </p>
-        <p className="mt-2">
-          If you like my portfolio I would love to chat about your ideas or
-          possible collaboration. You can reach me out at on the link below.
-        </p>
-        <p className="mt-4">Robert</p>
-        <section className="flex text-slate-400 text-xs font-light mt-12 space-x-6 pl-1 items-center">
-          <a
-            href="https://x.com/0xrbrada"
-            target="_blank"
-            className={aIconClass}
-          >
-            <XLogo
-              className={`h-[2rem] w-auto display:inline-block cursor-pointer ${iconHoverClasses} `}
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/robert-brada-252474112/"
-            target="_blank"
-            className={aIconClass}
-          >
-            <LinkedinLogo
-              className={`h-[2.3rem] w-auto display:inline-block cursor-pointer ${iconHoverClasses}`}
-            />
-          </a>
-          <a
-            href="https://github.com/robertbrada"
-            target="_blank"
-            className={aIconClass}
-          >
-            <GithubLogo
-              className={`h-[2.3rem] w-auto display:inline-block cursor-pointer ${iconHoverClasses}`}
-            />
-          </a>
-        </section>
+    <div>
+      <div className="flex flex-col md:flex-row gap-10">
+        <div className="text-justify">
+          <p>
+            {/* Happy to see you on my portfolio page!  */}I am a software
+            developer and product designer based in Prague - Czech Republic. I
+            work mostly on frontend side of things. Creating the initial
+            wireframes and then iterating as I interact with the product.
+            Usually I work with Figma, React, Next.js. I studied Cybernetics but
+            got hooked up by crypto in 2017 and since then following that path.
+            I joined SatoShilabs in 2020 and later on started work at RockawayX
+            which is a crypto company running VC team, staking services and own
+            Labs developer studio.
+          </p>
+          <p className="mt-2">
+            Even though I have software background I love creating great
+            eye-catching, easy-to-navigate easy-to-use products with simple UI
+            that are a pleasure to use. On this page you can see some that I
+            designed and built either by myself or in collaborations with my
+            colleagues.
+          </p>
+          <p className="mt-2">
+            If you like my portfolio I would love to chat about your ideas or
+            possible collaboration. You can reach me out at on the link below.
+          </p>
+          <p className="mt-4">Robert</p>
+        </div>
+        <img
+          className="w-48 auto h-min rounded-sm mx-auto mt-2 md:mx-0"
+          alt="Robert Brada"
+          src={me}
+        />
       </div>
-      <img
-        className="w-48 auto h-min rounded-sm mt-2"
-        alt="Robert Brada"
-        src={me}
-      />
+      <section className="flex text-slate-400 text-xs font-light mt-12 space-x-6 pl-1 items-center justify-center">
+        <a href="https://x.com/0xrbrada" target="_blank" className={aIconClass}>
+          <XLogo
+            className={`h-[2rem] w-auto display:inline-block cursor-pointer ${iconHoverClasses} `}
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/robert-brada-252474112/"
+          target="_blank"
+          className={aIconClass}
+        >
+          <LinkedinLogo
+            className={`h-[2.3rem] w-auto display:inline-block cursor-pointer ${iconHoverClasses}`}
+          />
+        </a>
+        <a
+          href="https://github.com/robertbrada"
+          target="_blank"
+          className={aIconClass}
+        >
+          <GithubLogo
+            className={`h-[2.3rem] w-auto display:inline-block cursor-pointer ${iconHoverClasses}`}
+          />
+        </a>
+      </section>
     </div>
   ),
 };
