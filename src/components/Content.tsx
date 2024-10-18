@@ -90,11 +90,14 @@ export function Content({ selectedProject }: ContentProps) {
       >
         <div className="col-span-3">
           <div className="mb-6">{descriptions[selectedProject]}</div>
-          <FeaturedImage
-            onClick={(src) => handleOnClick(src)}
-            images={images[selectedProject]}
-          />
+          {images[selectedProject].length > 0 && (
+            <FeaturedImage
+              onClick={(src) => handleOnClick(src)}
+              images={images[selectedProject]}
+            />
+          )}
         </div>
+
         <div className="col-span-1 pl-8 h-min border-l-[1px]">
           <References references={references[selectedProject]} />
         </div>

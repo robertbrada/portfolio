@@ -17,7 +17,7 @@ interface ReferencesProps {
   references: Reference[];
 }
 const aIconClass =
-  "hover:text-slate-600 rounded-full hover:scale-[1.02] duration-100 transition-transform flex items-center gap-1.5 text-sm";
+  "hover:text-text-primary rounded-full hover:scale-[1.02] duration-100 transition-transform flex items-center gap-1.5 text-sm";
 
 const iconCommonClassName = "w-[1rem] display:inline-block cursor-pointer my-2";
 const icons: Record<ReferenceType, React.ReactNode> = {

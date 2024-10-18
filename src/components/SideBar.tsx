@@ -103,13 +103,9 @@ const labelClasses: Record<Project, string> = {
 
 const dateClasses = "font-bold text-xs px-2 mt-8 mb-2 text-[#151515]";
 
-const aIconClass =
-  "hover:bg-slate-100 rounded-full hover:scale-[1.2] duration-100 transition-transform";
-const iconHoverClasses = "px-1 py-1 ";
-
 function ProjectItem({ color, selected, name, onClick }: ItemProps) {
   return (
-    <li className="my-1">
+    <li className="">
       <button
         onClick={() => onClick(name)}
         // className={getActiveClassName(selected, color)}
@@ -136,8 +132,8 @@ interface SideBarProps {
 
 export function SideBar({ onSelected, selected }: SideBarProps) {
   return (
-    <aside className="h-screen sticky top-0 w-64 text-left px-4 py-4 shrink-0 flex flex-col">
-      <div className="border-r-[1px] py-2 h-full flex flex-col">
+    <aside className="h-screen sticky top-0 w-64 text-left px-4 shrink-0 flex flex-col">
+      <div className="border-r-[1px] py-6 h-full flex flex-col">
         <section
           className="pl-[0.5rem] pt-[1.5rem]"
           onClick={() => {
@@ -145,7 +141,7 @@ export function SideBar({ onSelected, selected }: SideBarProps) {
           }}
         >
           {/* <span className="font-medium text-blue-700 text-xs"> */}
-          <div className="flex space-x-2 items-center">
+          <div className="flex space-x-2 items-center cursor-pointer hover:scale-[1.03] transition-all duration-100">
             <img className="w-6 h-6" alt="Robert Brada" src={me} />
             {/* <img className="w-6 h-6 rounded-full" alt="Robert Brada" src={"/favicon-punk.svg"} /> */}
             <h1 className="font-bold text-[1.2rem] mt-[-0.1rem] text-black">
@@ -158,19 +154,18 @@ export function SideBar({ onSelected, selected }: SideBarProps) {
           <div className={dateClasses}>2024</div>
           <ul className="">
             <ProjectItem
-              color="#6B43EE"
-              name={Project.DuoCards}
-              onClick={onSelected}
-              selected={selected === Project.DuoCards}
-            />
-            <ProjectItem
               color="#2FB3A3"
               name={Project.Eigen}
               onClick={onSelected}
               selected={selected === Project.Eigen}
             />
+            <ProjectItem
+              color="#6B43EE"
+              name={Project.DuoCards}
+              onClick={onSelected}
+              selected={selected === Project.DuoCards}
+            />
           </ul>
-          {/* <div className="font-bold text-sm px-3 my-3">2023</div> */}
           <div className={dateClasses}>2023</div>
           <ul className="">
             <ProjectItem
@@ -179,20 +174,23 @@ export function SideBar({ onSelected, selected }: SideBarProps) {
               onClick={onSelected}
               selected={selected === Project.StakeBar}
             />
-            <ProjectItem
-              color="#2FB3A3"
-              name={Project.Observatory}
-              onClick={onSelected}
-              selected={selected === Project.Observatory}
-            />
+          </ul>
+          <div className={dateClasses}>2022</div>
+          <ul className="">
             <ProjectItem
               color="#3FA22F"
               name={Project.SDP}
               onClick={onSelected}
               selected={selected === Project.SDP}
             />
+            <ProjectItem
+              color="#2FB3A3"
+              name={Project.Observatory}
+              onClick={onSelected}
+              selected={selected === Project.Observatory}
+            />
           </ul>
-          <div className={dateClasses}>2022</div>
+          <div className={dateClasses}>2021</div>
           <ul className="">
             <ProjectItem
               color="#6B43EE"
@@ -201,7 +199,7 @@ export function SideBar({ onSelected, selected }: SideBarProps) {
               selected={selected === Project.CrocoFinance}
             />
           </ul>
-          <div className={dateClasses}>2021</div>
+          <div className={dateClasses}>2020</div>
           <ul className="">
             <ProjectItem
               color="#6B43EE"
@@ -210,37 +208,6 @@ export function SideBar({ onSelected, selected }: SideBarProps) {
               selected={selected === Project.Trezor}
             />
           </ul>
-        </section>
-        <section className="flex text-slate-400 text-xs font-light mt-auto space-x-5 pl-1 items-center">
-          {/* <div>Deployed via GitHub Pages</div>
-          <p>Twitter, Linkein</p> */}
-          <a
-            href="https://x.com/0xrbrada"
-            target="_blank"
-            className={aIconClass}
-          >
-            <XLogo
-              className={`h-[1.3rem] w-auto display:inline-block cursor-pointer ${iconHoverClasses} `}
-            />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/robert-brada-252474112/"
-            target="_blank"
-            className={aIconClass}
-          >
-            <LinkedinLogo
-              className={`h-6 w-auto display:inline-block cursor-pointer ${iconHoverClasses}`}
-            />
-          </a>
-          <a
-            href="https://github.com/robertbrada"
-            target="_blank"
-            className={aIconClass}
-          >
-            <GithubLogo
-              className={`h-[1.55rem] w-auto display:inline-block cursor-pointer ${iconHoverClasses}`}
-            />
-          </a>
         </section>
       </div>
     </aside>

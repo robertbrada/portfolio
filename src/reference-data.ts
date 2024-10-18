@@ -4,14 +4,14 @@ import { Project } from "./types";
 const references: Record<Project, Reference[]> = {
   [Project.Trezor]: [
     {
-      type: "github",
-      link: "https://github.com/trezor/trezor-suite",
-      description: "trezor",
-    },
-    {
       type: "web",
       link: "https://trezor.io/trezor-suite",
       description: "trezor.io",
+    },
+    {
+      type: "github",
+      link: "https://github.com/trezor/trezor-suite",
+      description: "trezor",
     },
   ],
   [Project.CrocoFinance]: [

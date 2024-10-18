@@ -35,7 +35,7 @@ const images: Record<Project, string[]> = {
     observatoryValidators,
   ],
   [Project.RobertBrada]: [],
-  [Project.SDP]: [sdpLanding, sdpValidators, sdpChain, sdpGuide],
+  [Project.SDP]: [sdpChain, sdpValidators, sdpGuide],
   [Project.StakeBar]: [
     stakeLandingBlue,
     stakeApp,
