@@ -17,9 +17,9 @@ interface ReferencesProps {
   references: Reference[];
 }
 const aIconClass =
-  "hover:text-text-primary rounded-full hover:scale-[1.02] duration-100 transition-transform flex items-center gap-1.5 text-sm";
+  "hover:text-text-primary hover:scale-[1.02] duration-100 transition-transform flex items-center gap-1.5 text-sm w-fit";
 
-const iconCommonClassName = "w-[1rem] display:inline-block cursor-pointer my-2";
+const iconCommonClassName = "w-[1rem] cursor-pointer my-2";
 const icons: Record<ReferenceType, React.ReactNode> = {
   github: <GithubLogo className={`h-[0.75rem] ${iconCommonClassName}`} />,
   loom: <LoomLogo className={`h-[0.75rem]  ${iconCommonClassName}`} />,
@@ -32,6 +32,9 @@ const icons: Record<ReferenceType, React.ReactNode> = {
 export const References = ({ references }: ReferencesProps) => {
   return (
     <ul>
+      <div className="text-sm mb-2 border-b-[1px] pb-2  xl:hidden">
+        Reference links
+      </div>
       {references.map((reference, index) => (
         <li key={index} className="">
           <a href={reference.link} target="_blank" className={aIconClass}>

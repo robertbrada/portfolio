@@ -86,7 +86,7 @@ export function Content({ selectedProject }: ContentProps) {
       </div>
       <div
         id="description"
-        className="text-text-secondary mb-6 grid grid-cols-4 gap-10"
+        className="text-text-secondary mb-6 flex flex-col gap-10 xl:grid xl:grid-cols-4"
       >
         <div className="col-span-3">
           <div className="mb-6">{descriptions[selectedProject]}</div>
@@ -98,7 +98,7 @@ export function Content({ selectedProject }: ContentProps) {
           )}
         </div>
 
-        <div className="col-span-1 pl-8 h-min border-l-[1px]">
+        <div className="col-span-1 pt-4 h-min xl:border-t-[0px] xl:border-l-[1px] xl:pl-8 xl:pt-0">
           <References references={references[selectedProject]} />
         </div>
       </div>

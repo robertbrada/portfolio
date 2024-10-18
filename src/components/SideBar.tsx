@@ -1,9 +1,5 @@
 import { Project } from "../types";
-// import me from "../assets/images/me-square.jpg";
-import me from "../../public/favicon-punk.svg";
-import { XLogo } from "./XLogo";
-import { LinkedinLogo } from "./LinkedinLogo";
-import { GithubLogo } from "./GithubLogo";
+import me from "/favicon-punk.svg";
 
 interface ItemProps {
   color: string;
@@ -11,17 +7,6 @@ interface ItemProps {
   name: Project;
   onClick: (name: Project) => void;
 }
-
-const colorsByProject: Record<Project, string> = {
-  [Project.StakeBar]: "stakebar",
-  [Project.Observatory]: "observatory",
-  [Project.SDP]: "sdp",
-  [Project.CrocoFinance]: "croco",
-  [Project.Trezor]: "trezor",
-  [Project.DuoCards]: "duo",
-  [Project.Eigen]: "eigen",
-  [Project.RobertBrada]: "robert",
-};
 
 const sharedClasses =
   "my-1 py-0.5 px-2 w-fit rounded-md text-left text-sm hover:scale-[1.08] transition-all hover:font-medium duration-100 hover:translate-y-[-1px]";
@@ -73,34 +58,6 @@ function getActiveClassName(selected: boolean, project: Project) {
   // return selected ? `text-stakebar` : "text-black";
 }
 
-const commonLabelClasses =
-  "font-bold text-[0.8rem] pl-[0.04rem] mt-[-0.1rem] opacity-80";
-
-const labelClasses: Record<Project, string> = {
-  [Project.RobertBrada]: `${commonLabelClasses} text-${
-    colorsByProject[Project.RobertBrada]
-  }`,
-  [Project.StakeBar]: `${commonLabelClasses} text-${
-    colorsByProject[Project.StakeBar]
-  }`,
-  [Project.Observatory]: `${commonLabelClasses} text-${
-    colorsByProject[Project.Observatory]
-  }`,
-  [Project.SDP]: `${commonLabelClasses} text-${colorsByProject[Project.SDP]}`,
-  [Project.CrocoFinance]: `${commonLabelClasses} text-${
-    colorsByProject[Project.CrocoFinance]
-  }`,
-  [Project.Eigen]: `${commonLabelClasses} text-${
-    colorsByProject[Project.Eigen]
-  }`,
-  [Project.DuoCards]: `${commonLabelClasses} text-${
-    colorsByProject[Project.DuoCards]
-  }`,
-  [Project.Trezor]: `${commonLabelClasses} text-${
-    colorsByProject[Project.Trezor]
-  }`,
-};
-
 const dateClasses = "font-bold text-xs px-2 mt-8 mb-2 text-[#151515]";
 
 function ProjectItem({ color, selected, name, onClick }: ItemProps) {
@@ -108,16 +65,7 @@ function ProjectItem({ color, selected, name, onClick }: ItemProps) {
     <li className="">
       <button
         onClick={() => onClick(name)}
-        // className={getActiveClassName(selected, color)}
         className={getActiveClassName(selected, name)}
-        // className={classesByProject[name].selected}
-
-        // className={`text-[${selected ? color : "#000000"}] font-bold text-sm`}
-        // className={`text-[${
-        //   selected ? "red-400" : "#000000"
-        // }] font-bold text-sm`}
-        // className={`text-[${color}] font-bold text-sm`}
-        // className={`text-red-400 font-bold text-sm`}
       >
         {name}
       </button>
@@ -140,15 +88,12 @@ export function SideBar({ onSelected, selected }: SideBarProps) {
             onSelected(Project.RobertBrada);
           }}
         >
-          {/* <span className="font-medium text-blue-700 text-xs"> */}
           <div className="flex space-x-2 items-center cursor-pointer hover:scale-[1.03] transition-all duration-100">
             <img className="w-6 h-6" alt="Robert Brada" src={me} />
-            {/* <img className="w-6 h-6 rounded-full" alt="Robert Brada" src={"/favicon-punk.svg"} /> */}
             <h1 className="font-bold text-[1.2rem] mt-[-0.1rem] text-black">
               Robert Brada
             </h1>
           </div>
-          {/* <div className={labelClasses[selected]}>Portfolio</div> */}
         </section>
         <section className="pt-2">
           <div className={dateClasses}>2024</div>
