@@ -11,7 +11,23 @@
 @font-face {
   font-family: "Satoshi";
   src: local("Satoshi"), url("./assets/fonts/Satoshi/Satoshi.ttf");
+  font-weight: medium;
+  font-style: normal;
 }
+
+@font-face {
+  font-family: "Satoshi";
+  src: local("Satoshi"), url("./assets/fonts/Satoshi/Satoshi-Medium.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* @font-face {
+  font-family: "Satoshi";
+  src: local("Satoshi"), url("./assets/fonts/Satoshi/Satoshi-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+} */
 
 * {
   box-sizing: border-box;
@@ -25,8 +41,9 @@
   /* font-family: "Cabin Variable", sans-serif; */
   /* font-family: "Poppins", sans-serif; */
   /* font-family: "Lexend Deca Variable", sans-serif; */
+  /* font-family: "Rubik Variable", sans-serif; */
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: normal;
 
   /* color-scheme: light dark; */
   /* color: rgba(255, 255, 255, 0.87); */

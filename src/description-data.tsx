@@ -3,6 +3,7 @@ import me from "./assets/images/me.jpg";
 import { LinkedinLogo } from "./components/LinkedinLogo";
 import { GithubLogo } from "./components/GithubLogo";
 import { XLogo } from "./components/XLogo";
+import { A } from "./components/A";
 
 const aIconClass = "hover:scale-[1.15] duration-100 transition-transform";
 const iconHoverClasses = "px-1 py-1 ";
@@ -12,41 +13,24 @@ const descriptions: Record<Project, React.ReactNode> = {
     <div>
       <p>
         I joined{" "}
-        <a
-          href="https://satoshilabs.com/"
-          target="_blank"
-          className="text-[#03854D] hover:underline"
-        >
+        <A project={Project.Trezor} href="https://satoshilabs.com/">
           SatoshiLabs
-        </a>{" "}
+        </A>{" "}
         in 2020 as a frontend developer. With the team we were building{" "}
-        <a
-          href="https://trezor.io/trezor-suite"
-          target="_blank"
-          className="text-[#03854D] hover:underline"
-        >
+        <A project={Project.Trezor} href="https://trezor.io/trezor-suite">
           Trezor Suite
-        </a>{" "}
-        which is a web interface to interact with the{" "}
-        <a
-          href="https://trezor.io/"
-          target="_blank"
-          className="text-[#03854D] hover:underline"
-        >
+        </A>{" "}
+        <A project={Project.Trezor} href="https://trezor.io/">
           Trezor
-        </a>{" "}
+        </A>{" "}
         hardware wallet. My main job was to make existing interface more user
         friendly and interactive based on the user feedback.
       </p>
       <p className="mt-2">
         Below you can see some example screens that I have worked on in the{" "}
-        <a
-          href="https://trezor.io/trezor-suite"
-          target="_blank"
-          className="text-[#03854D] hover:underline"
-        >
+        <A project={Project.Trezor} href="https://trezor.io/trezor-suite">
           Trezor Suite
-        </a>{" "}
+        </A>{" "}
         web app. The design didn't change since 2020.
       </p>
     </div>
@@ -55,30 +39,24 @@ const descriptions: Record<Project, React.ReactNode> = {
     <div>
       <p>
         Croco Finance started as a 4-week{" "}
-        <a
+        <A
+          project={Project.CrocoFinance}
           href="https://ethglobal.com/events/ethonline"
-          target="_blank"
-          className="text-croco hover:underline"
         >
           ETH Online hackathon
-        </a>{" "}
+        </A>{" "}
         project. We got a price for the top 3 projects. Later we secured a grant
         from{" "}
-        <a
-          href="https://app.uniswap.org/"
-          target="_blank"
-          className="text-croco hover:underline"
-        >
+        <A project={Project.CrocoFinance} href="https://app.uniswap.org/">
           Uniswap
-        </a>{" "}
+        </A>{" "}
         to support newer version of the protocol. The app measures so-called{" "}
-        <a
-          href=" https://support.uniswap.org/hc/en-us/articles/20904453751693-What-is-Impermanent-Loss"
-          target="_blank"
-          className="text-croco hover:underline"
+        <A
+          project={Project.CrocoFinance}
+          href="https://support.uniswap.org/hc/en-us/articles/20904453751693-What-is-Impermanent-Loss"
         >
           impermanent loss
-        </a>{" "}
+        </A>{" "}
         on Uniswap decentralized exchange.
       </p>
       <p>
@@ -99,13 +77,9 @@ const descriptions: Record<Project, React.ReactNode> = {
       Here I took a break from tech-oriented products and tried to to something
       more playful. This was purely a design project where I tried to redesig
       landing page of{" "}
-      <a
-        href="https://support.uniswap.org/hc/en-us/articles/20904453751693-What-is-Impermanent-Loss"
-        target="_blank"
-        className="text-duo hover:underline"
-      >
+      <A project={Project.DuoCards} href="https://duocards.com/en/">
         DuoCards
-      </a>{" "}
+      </A>{" "}
       language app as part of a hiring process.
     </div>
   ),
@@ -113,30 +87,18 @@ const descriptions: Record<Project, React.ReactNode> = {
     <div>
       <p>
         This is a support project for the the{" "}
-        <a
-          href="https://www.eigenlayer.xyz/"
-          target="_blank"
-          className="text-[#3a24b5] hover:underline"
-        >
+        <A project={Project.Eigen} href="https://www.eigenlayer.xyz/">
           EigenLayer
-        </a>{" "}
-        re-staking protocol. The company I worked in (
-        <a
-          href="https://rockawayx.com/"
-          target="_blank"
-          className="text-[#3a24b5] hover:underline"
-        >
+        </A>{" "}
+        re-staking protocol. The company I worked in ({" "}
+        <A project={Project.Eigen} href="https://rockawayx.com/">
           RockawayX
-        </a>
+        </A>{" "}
         ) was interested in monitoring EigenLayer AVSs (Actively Validated
         Services). This web-app tracks events that happen on the{" "}
-        <a
-          href="https://www.eigenda.xyz/"
-          target="_blank"
-          className="text-[#3a24b5] hover:underline"
-        >
+        <A project={Project.Eigen} href="https://www.eigenda.xyz/">
           EigenDA
-        </a>{" "}
+        </A>{" "}
         AVS because operators of this service couldn't make sense of the
         protocol traffic.
       </p>
@@ -151,14 +113,9 @@ const descriptions: Record<Project, React.ReactNode> = {
   [Project.Observatory]: (
     <div>
       <p>
-        {" "}
-        <a
-          href="https://observatory.zone/"
-          target="_blank"
-          className="text-observatory hover:underline"
-        >
+        <A project={Project.Observatory} href="https://observatory.zone/">
           Observatory
-        </a>{" "}
+        </A>{" "}
         started as an app measuring decentralization of blockchains in the
         Cosmos ecosystem. Later we added newsfeed, information about governance
         etc. It's a very data-heavy app which required a lot of work to make
@@ -170,13 +127,9 @@ const descriptions: Record<Project, React.ReactNode> = {
     <div>
       <p>
         {" "}
-        <a
-          href="https://smartdelegation.app/"
-          target="_blank"
-          className="text-sdp hover:underline"
-        >
+        <A project={Project.SDP} href="https://smartdelegation.app/">
           Smart Delegation App
-        </a>{" "}
+        </A>{" "}
         is an app that helps blockchain foundations delegated their
         cryptocurrency to validators that perform well. The foundation can
         specify their own rules that drive the asset distribution. It was very
@@ -193,22 +146,13 @@ const descriptions: Record<Project, React.ReactNode> = {
   [Project.StakeBar]: (
     <div>
       <p>
-        {" "}
-        <a
-          href="https://stakebar.io/"
-          target="_blank"
-          className="text-stakebar hover:underline"
-        >
+        <A project={Project.StakeBar} href="https://stakebar.io/">
           StakeBar
-        </a>{" "}
+        </A>{" "}
         is a tool built on top of the{" "}
-        <a
-          href="https://observatory.zone/"
-          target="_blank"
-          className="text-stakebar hover:underline"
-        >
+        <A project={Project.StakeBar} href="https://observatory.zone/">
           Observatory
-        </a>{" "}
+        </A>{" "}
         project I was working on before. It picks validators on behalf of users
         who users who want to stake their cryptocurrencies. The validators are
         picked in such a way that decentralizes the network and maximizes the
@@ -234,21 +178,13 @@ const descriptions: Record<Project, React.ReactNode> = {
             Usually I work with Figma, React, Next.js. I studied Cybernetics but
             got hooked up by crypto in 2017 and since then following that path.
             I joined{" "}
-            <a
-              href="https://satoshilabs.com/"
-              target="_blank"
-              className="text-[#255ed9] hover:underline"
-            >
+            <A project={Project.RobertBrada} href="https://satoshilabs.com/">
               SatoshiLabs
-            </a>{" "}
+            </A>{" "}
             in 2020 and later on started work at{" "}
-            <a
-              href="https://rockawayx.com/"
-              target="_blank"
-              className="text-[#255ed9] hover:underline"
-            >
+            <A project={Project.RobertBrada} href="https://rockawayx.com/">
               RockawayX
-            </a>{" "}
+            </A>{" "}
             which is a crypto company running VC team, staking services and own
             Labs developer studio.
           </p>
