@@ -49,6 +49,11 @@ const references: Record<Project, Reference[]> = {
       link: "https://eigen.agent.tech/mainnet",
       description: "eigen.agent.tech",
     },
+    {
+      type: "web",
+      link: "https://www.eigenlayer.xyz/",
+      description: "eigenlayer.xyz",
+    },
   ],
   [Project.Observatory]: [
     {
