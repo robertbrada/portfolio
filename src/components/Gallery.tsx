@@ -4,7 +4,7 @@ import { wrap } from "popmotion";
 import * as React from "react";
 import { useState } from "react";
 import classes from "./Gallery.module.css";
-import { ProjectImage } from "../image-data";
+import { ProjectImage } from "../images";
 
 const variants = {
   enter: (direction: number) => {

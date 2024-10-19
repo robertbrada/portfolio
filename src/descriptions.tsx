@@ -90,10 +90,10 @@ const descriptions: Record<Project, React.ReactNode> = {
         <A project={Project.Eigen} href="https://www.eigenlayer.xyz/">
           EigenLayer
         </A>{" "}
-        re-staking protocol. The company I worked in ({" "}
+        re-staking protocol. The company I worked in (
         <A project={Project.Eigen} href="https://rockawayx.com/">
           RockawayX
-        </A>{" "}
+        </A>
         ) was interested in monitoring EigenLayer AVSs (Actively Validated
         Services). This web-app tracks events that happen on the{" "}
         <A project={Project.Eigen} href="https://www.eigenda.xyz/">

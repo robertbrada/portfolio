@@ -2,13 +2,13 @@ import { Project } from "../types";
 
 const colorClasses: Record<Project, string> = {
   [Project.Trezor]: "text-[#03854D]",
-  [Project.CrocoFinance]: "text-croco",
-  [Project.DuoCards]: "text-duo",
+  [Project.CrocoFinance]: "text-[#8fbe20]",
+  [Project.DuoCards]: "text-[#63b53d]",
   [Project.Eigen]: "text-[#4a63e8]",
-  [Project.Observatory]: "text-observatory",
-  [Project.SDP]: "text-sdp",
-  [Project.StakeBar]: "text-stakebar",
-  [Project.RobertBrada]: "text-[#255ed9]",
+  [Project.Observatory]: "text-[#2290ff]",
+  [Project.SDP]: "text-[#3aa3f9]",
+  [Project.StakeBar]: "text-[#ce5fff]",
+  [Project.RobertBrada]: "text-[#4479ec]",
 };
 interface LinkProps {
   project: Project;

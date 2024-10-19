@@ -1,4 +1,4 @@
-import { ProjectImage } from "../image-data";
+import { ProjectImage } from "../images";
 import { ExpandIcon } from "./ExpandIcon";
 import classes from "./FeturedImage.module.css";
 import cx from "clsx";

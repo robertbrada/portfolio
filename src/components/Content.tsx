@@ -3,9 +3,9 @@ import { Project } from "../types";
 import { FeaturedImage } from "./FeaturedImage";
 import { PersonalPage } from "./PersonalPage";
 import { useEffect, useState } from "react";
-import descriptions from "../description-data";
-import images from "../image-data";
-import references from "../reference-data";
+import descriptions from "../descriptions";
+import images from "../images";
+import references from "../references";
 import { Gallery } from "./Gallery";
 import { References } from "./References";
 
@@ -37,7 +37,8 @@ export function Content({ selectedProject }: ContentProps) {
   };
 
   const handleOnClick = (src: string) => {
-    const indexOfSrc = images[selectedProject].indexOf(src);
+    const srcs = images[selectedProject].map(({ src }) => src);
+    const indexOfSrc = srcs.indexOf(src);
     setGalleryImageIndex(indexOfSrc > -1 ? indexOfSrc : 0);
     setGalleryOpen(true);
   };

@@ -1,9 +1,8 @@
 import crocoCrocosHorizontal from "./assets/images/croco/crocos-horizontal.svg";
-import crocoLanding from "./assets/images/croco/landing.svg";
 import crocoLanding2 from "./assets/images/croco/landing-2.svg";
-import crocoSimulator from "./assets/images/croco/simulator.svg";
-import crocoSimulatorV3 from "./assets/images/croco/simulator-v3.svg";
 import crocoPoolsV3 from "./assets/images/croco/pools-v3.svg";
+import crocoSimulatorV3 from "./assets/images/croco/simulator-v3.svg";
+import crocoSimulator from "./assets/images/croco/simulator.svg";
 import duoOriginal from "./assets/images/duocards/original.png";
 import duoRedesignBlue from "./assets/images/duocards/redesign-blue.svg";
 import duoRedesign from "./assets/images/duocards/redesign.svg";
@@ -12,8 +11,8 @@ import eigenOperatorFutureLight from "./assets/images/eigen/operator-future-ligh
 import eigenServiceDark from "./assets/images/eigen/service-dark.svg";
 import observatoryDashboardDark from "./assets/images/observatory/dashboard-dark.svg";
 import observatoryDashboardLight from "./assets/images/observatory/dashboard-light.svg";
-import observatoryValidators from "./assets/images/observatory/validators.svg";
 import observatoryValidatorsList from "./assets/images/observatory/validators-list.svg";
+import observatoryValidators from "./assets/images/observatory/validators.svg";
 import sdpChain from "./assets/images/sdp/chain.svg";
 import sdpGuide from "./assets/images/sdp/guide.svg";
 import sdpValidators from "./assets/images/sdp/validators.svg";
@@ -34,8 +33,8 @@ export interface ProjectImage {
 const images: Record<Project, ProjectImage[]> = {
   [Project.Trezor]: [
     { src: trexorEthTx, border: true },
-    { src: trezorWallet, border: false },
     { src: trezorChart, border: false },
+    { src: trezorWallet, border: false },
   ],
   [Project.CrocoFinance]: [
     { src: crocoLanding2, border: true },
