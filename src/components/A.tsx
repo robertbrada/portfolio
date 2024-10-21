@@ -3,9 +3,9 @@ import { Project } from "../types";
 const colorClasses: Record<Project, string> = {
   [Project.Trezor]: "text-[#03854D]",
   [Project.CrocoFinance]: "text-[#8fbe20]",
-  [Project.DuoCards]: "text-[#63b53d]",
+  [Project.DuoCards]: "text-[#4ebbf2]",
   [Project.Eigen]: "text-[#4a63e8]",
-  [Project.Observatory]: "text-[#2290ff]",
+  [Project.Observatory]: "text-[#5bc0b4]",
   [Project.SDP]: "text-[#3aa3f9]",
   [Project.StakeBar]: "text-[#ce5fff]",
   [Project.RobertBrada]: "text-[#4479ec]",

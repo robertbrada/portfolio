@@ -27,7 +27,8 @@ import { Project } from "./types";
 
 export interface ProjectImage {
   src: string;
-  border: boolean;
+  border?: boolean;
+  description?: string;
 }
 
 const images: Record<Project, ProjectImage[]> = {

@@ -72,7 +72,7 @@ export function Content({ selectedProject }: ContentProps) {
         className="text-text-secondary mb-6 flex flex-col gap-10 xl:grid xl:grid-cols-4"
       >
         <div className="col-span-3">
-          <div className="mb-6">{descriptions[selectedProject]}</div>
+          <div className="mb-6 text-justify">{descriptions[selectedProject]}</div>
           {images[selectedProject].length > 0 && (
             <FeaturedImage
               onClick={(src) => handleOnClick(src)}
