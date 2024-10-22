@@ -5,6 +5,7 @@ import * as React from "react";
 import { useState } from "react";
 import classes from "./Gallery.module.css";
 import { ProjectImage } from "../images";
+import { InfoIcon } from "./InfoIcon";
 
 const variants = {
   enter: (direction: number) => {
@@ -114,14 +115,16 @@ export const Gallery = ({ images, firstImage }: GalleryProps) => {
             className={cx(classes.img, "rounded-sm")}
             src={images[imageIndex].src}
           />
-          {/* <div className={cx(classes.middle, "px-2 py-1 rounded-md")}>
-            <div className={classes.text}>
-              <span className="font-medium mr-2">Newsfeed page:</span>
-              <span className="font-light">
-                This is description of the screen presented
-              </span>
+          {images[imageIndex].description && (
+            <div className={cx(classes.middle, "px-2 py-1 rounded-md hidden md:flex")}>
+              <div className={cx(classes.text, "flex justify-between items-center")}>
+                <span className="">
+                  {images[imageIndex].description}
+                </span>
+                <InfoIcon className="h-[1rem] w-auto" />
+              </div>
             </div>
-          </div> */}
+          )}
         </motion.div>
       </AnimatePresence>
       <div className="next" onClick={() => paginate(1)}>

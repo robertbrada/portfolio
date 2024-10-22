@@ -38,21 +38,60 @@ const images: Record<Project, ProjectImage[]> = {
     { src: trezorWallet, border: false },
   ],
   [Project.CrocoFinance]: [
-    { src: crocoLanding2, border: true },
-    { src: crocoSimulator, border: true },
-    { src: crocoCrocosHorizontal, border: true },
-    { src: crocoPoolsV3, border: true },
-    { src: crocoSimulatorV3, border: true },
+    {
+      src: crocoLanding2,
+      border: true,
+      description:
+        "Landing page of Croco Finance with special Christmas design",
+    },
+    {
+      src: crocoSimulator,
+      border: true,
+      description:
+        "Simulator: on the left the user changes prices of assets in selected pool. On the right side he can see compare current and simulated states",
+    },
+    {
+      src: crocoCrocosHorizontal,
+      border: true,
+      description: "All croco avatars being shown on the web",
+    },
+    {
+      src: crocoPoolsV3,
+      border: true,
+      description: "Design of the newer version supporting Uniswap v3",
+    },
+    {
+      src: crocoSimulatorV3,
+      border: true,
+      description: "Simulator of the newer version supporting Uniswap v3",
+    },
   ],
   [Project.DuoCards]: [
-    { src: duoRedesign, border: false },
-    { src: duoRedesignBlue, border: false },
-    { src: duoOriginal, border: true },
+    {
+      src: duoRedesign,
+      border: false,
+      description: "Redesigned landing page in green",
+    },
+    {
+      src: duoRedesignBlue,
+      border: false,
+      description: "Redesigned landing page in blue",
+    },
+    {
+      src: duoOriginal,
+      border: true,
+      description:
+        "The existing landing page of duocards.com that should be redesigned",
+    },
   ],
   [Project.Eigen]: [
     { src: eigenServiceDark, border: false },
     { src: eigenNewsfeed, border: true },
-    { src: eigenOperatorFutureLight, border: true },
+    {
+      src: eigenOperatorFutureLight,
+      border: true,
+      description: "This page shows the future vision for this product design ",
+    },
   ],
   [Project.Observatory]: [
     { src: observatoryDashboardLight, border: false },
