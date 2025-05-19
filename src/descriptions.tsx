@@ -1,11 +1,17 @@
 import { Project } from "./types";
-import me from "./assets/images/me.jpg";
+import me from "./assets/images/robert/ja-cropped.jpg";
 import { LinkedinLogo } from "./components/LinkedinLogo";
 import { GithubLogo } from "./components/GithubLogo";
 import { XLogo } from "./components/XLogo";
+import { WormholeLogo } from "./components/WormholeLogo";
+import { RockawayLogo } from "./components/RockawayLogo";
+import { TrezorLogo } from "./components/TrezorLogo";
 import { A } from "./components/A";
+import { ObservatoryLogo } from "./components/ObservatoryLogo";
+import { MayanLogo } from "./components/MayanLogo";
 
 const aIconClass = "hover:scale-[1.15] duration-100 transition-transform";
+const aLogoClass = "hover:scale-[1.1] duration-100 transition-transform";
 const iconHoverClasses = "px-1 py-1 ";
 
 const descriptions: Record<Project, React.ReactNode> = {
@@ -219,71 +225,155 @@ const descriptions: Record<Project, React.ReactNode> = {
   [Project.RobertBrada]: (
     <div>
       <div className="flex flex-col md:flex-row gap-10">
-        <div className="text-justify ">
+        <div className="text-justify flex-grow basis-3/4">
           <p>
             {/* Happy to see you on my portfolio page!  */}
             {/* I create wireframes in Figma, build the MVP and then I iterate on it as we see the needs. */}
-            I am a software developer and product designer based in Prague,
-            Czech Republic. I hold degree in Cybernetics but I got hooked on
-            crypto in 2017 and I have been following that path since then. In
-            2020, I joined{" "}
+            I'm a software engineer from Prague. I joined the crypto community
+            in 2018 after attending DevCon4 Ethereum conference. After
+            university, I worked in{" "}
             <A project={Project.RobertBrada} href="https://satoshilabs.com/">
               SatoshiLabs
             </A>
-            , and a year later, I joined{" "}
+            , the invertor of{" "}
+            <A
+              project={Project.RobertBrada}
+              href="https://trezor.io/?gclsrc=aw.ds&&utm_source=google&gad_source=1&gad_campaignid=20810887858&gbraid=0AAAAAClLb_tFxu1eFC-IlIHAo3gOIiFPe&utm_medium=cpc&utm_campaign=PMax%20%7C%20Feed%20%7C%20CZ&utm_id=20800700799&gclid=CjwKCAjwravBBhBjEiwAIr30VM7Xp3xUJl7RC2c2El2LxjNkwpFBZa-9ZEXGWTvONWMC7SOQ6BWSxRoCMHgQAvD_BwE"
+            >
+              Trezor
+            </A>{" "}
+            wallet. One year later, I joined{" "}
             <A project={Project.RobertBrada} href="https://rockawayx.com/">
               RockawayX
             </A>{" "}
-            as a founding member of its developer division.
+            as a founding member of its engineering division. We started
+            developing staking tools for Cosmos blockchains. Currently, we're
+            running solvers and bridging millions of USD value daily through{" "}
+            <A project={Project.RobertBrada} href="https://wormhole.com/">
+              Wormhole
+            </A>{" "}
+            and{" "}
+            <A project={Project.RobertBrada} href="https://mayan.finance/">
+              Mayan
+            </A>{" "}
+            cross-chain bridges.
             {/* running staking services and own developer studio. */}
             {/* I was a founding member of its developer studio */}
           </p>
           <p className="mt-2">
-            Despite my software background I love creating eye-catching and
-            easy-to-navigate products that are a pleasure to use. On this page,
-            you can see some of the projects I've built, either on my own or in
-            collaboration with my great colleagues.
+            I get driven by building products that are used by real people. This
+            site highlights work I’ve done on my own and in collaboration with
+            my great colleagues.
           </p>
           <p className="mt-2">
-            If you like my portfolio, I'd be happy to chat about your ideas and
-            potential collaboration. You can reach me via the links below.
+            If you have an idea about possible collaboration, I would't love to
+            hear about it. Leave me a message on{" "}
+            <A project={Project.RobertBrada} href="https://x.com/0xrbrada">
+              X
+            </A>{" "}
+            or{" "}
+            <A
+              project={Project.RobertBrada}
+              href="https://www.linkedin.com/in/robert-brada-252474112/"
+            >
+              LinkedIn
+            </A>
+            .
           </p>
-          <p className="mt-6">Have fun around here!</p>
           <p className="mt-6">Robert</p>
+          <div className="align-center my-16 mx-4">
+            <div className="grid grid-cols-3 gap-4 items-center justify-items-center">
+              {/* <WormholeLogo className="w-44 sm:w-36 xs:w-28" /> */}
+              <a
+                href="https://www.rockawayx.com/"
+                target="_blank"
+                className={aLogoClass}
+              >
+                <RockawayLogo className={`w-[6.3rem]`} />
+              </a>
+              <a
+                href="https://trezor.io/"
+                target="_blank"
+                className={aLogoClass}
+              >
+                <TrezorLogo className="w-20" />
+              </a>
+              <a
+                href="https://observatory.zone/"
+                target="_blank"
+                className={aLogoClass}
+              >
+                <ObservatoryLogo className="w-32" />
+              </a>
+            </div>
+            <div className="grid grid-cols-2 gap-4 items-center justify-items-center my-6 mx-20">
+              <a
+                href="https://wormhole.com/"
+                target="_blank"
+                className={aLogoClass}
+              >
+                <WormholeLogo className="w-28" />
+              </a>
+              <a
+                href="https://mayan.finance/"
+                target="_blank"
+                className={aLogoClass}
+              >
+                <MayanLogo className="w-24" />
+              </a>
+            </div>
+            {/* <div className="grid grid-cols-3 gap-4 items-center justify-items-center">
+              <div />
+              <DebridgeLogo className="w-[7rem]" />
+              <div />
+            </div> */}
+          </div>
         </div>
-        <img
-          className="w-48 auto h-min rounded-sm mx-auto mt-2 md:mx-0"
-          alt="Robert Brada"
-          src={me}
-        />
+        <div className="mt-2 flex-grow basis-1/4">
+          <img
+            className="rounded-md mx-auto max-w-60 md:max-w-full h-auto"
+            alt="Robert Brada"
+            src={me}
+          />
+          <section className="flex text-slate-400 text-xs font-light mt-4 space-x-2 pl-1 items-center justify-center">
+            <a
+              href="https://x.com/0xrbrada"
+              target="_blank"
+              className={aIconClass}
+            >
+              <XLogo
+                className={`h-[1.4rem] w-auto display:inline-block cursor-pointer ${iconHoverClasses} `}
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/robert-brada-252474112/"
+              target="_blank"
+              className={aIconClass}
+            >
+              <LinkedinLogo
+                className={`h-[1.6rem] w-auto display:inline-block cursor-pointer ${iconHoverClasses}`}
+              />
+            </a>
+            <a
+              href="https://github.com/robertbrada"
+              target="_blank"
+              className={aIconClass}
+            >
+              <GithubLogo
+                className={`h-[1.6rem] w-auto display:inline-block cursor-pointer ${iconHoverClasses}`}
+              />
+            </a>
+          </section>
+        </div>
       </div>
-      <section className="flex text-slate-400 text-xs font-light mt-12 space-x-6 pl-1 items-center justify-center">
-        <a href="https://x.com/0xrbrada" target="_blank" className={aIconClass}>
-          <XLogo
-            className={`h-[2rem] w-auto display:inline-block cursor-pointer ${iconHoverClasses} `}
-          />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/robert-brada-252474112/"
-          target="_blank"
-          className={aIconClass}
-        >
-          <LinkedinLogo
-            className={`h-[2.3rem] w-auto display:inline-block cursor-pointer ${iconHoverClasses}`}
-          />
-        </a>
-        <a
-          href="https://github.com/robertbrada"
-          target="_blank"
-          className={aIconClass}
-        >
-          <GithubLogo
-            className={`h-[2.3rem] w-auto display:inline-block cursor-pointer ${iconHoverClasses}`}
-          />
-        </a>
-      </section>
     </div>
   ),
+  [Project.Wormhole]: (
+    <div>
+      At RockawayX we build solver for Wormhole's Fast Transfer protocol.
+    </div>
+  ),
+  [Project.Mayan]: <div>At RockawayX we build solver for Mayan bridge.</div>,
 };
 
 export default descriptions;

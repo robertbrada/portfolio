@@ -9,6 +9,8 @@ const colorClasses: Record<Project, string> = {
   [Project.SDP]: "text-[#3aa3f9]",
   [Project.StakeBar]: "text-[#ce5fff]",
   [Project.RobertBrada]: "text-[#4479ec]",
+  [Project.Wormhole]: "text-[#03854D]",
+  [Project.Mayan]: "text-[#03854D]",
 };
 interface LinkProps {
   project: Project;

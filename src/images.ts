@@ -111,6 +111,8 @@ const images: Record<Project, ProjectImage[]> = {
     { src: stake1, border: false },
   ],
   [Project.RobertBrada]: [],
+  [Project.Wormhole]: [],
+  [Project.Mayan]: [],
 };
 
 export default images;

@@ -31,6 +31,8 @@ export default {
         trezor: "#000000",
         duo: "#238CE5",
         eigen: "#150958",
+        wormhole: "#000000",
+        mayan: "#0000AA",
         "text-primary": "#2D3748",
         "text-secondary": "#606d81",
         "text-tertiary": "#CBD5E0",

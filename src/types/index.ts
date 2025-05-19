@@ -7,5 +7,7 @@ export enum Project {
   Trezor = "Trezor",
   DuoCards = "DuoCards",
   Eigen = "EigenBeat",
+  Wormhole = "Wormhole",
+  Mayan = "Mayan Swap"
   // Spark = "Spark",
 }

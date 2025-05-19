@@ -102,6 +102,8 @@ const references: Record<Project, Reference[]> = {
       description: "Demo video",
     },
   ],
+  [Project.Wormhole]: [],
+  [Project.Mayan]: [],
 };
 
 export default references;
