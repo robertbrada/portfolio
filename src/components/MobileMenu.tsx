@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MenuIcon } from "./MenuIcon";
+import { MenuIcon } from "./icons/MenuIcon";
 import { MenuItems } from "./MenuItems";
 import me from "/favicon-punk.svg";
 import { Project } from "../types";

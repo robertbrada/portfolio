@@ -1,14 +1,14 @@
 import { Project } from "./types";
 import me from "./assets/images/robert/ja-cropped.jpg";
-import { LinkedinLogo } from "./components/LinkedinLogo";
-import { GithubLogo } from "./components/GithubLogo";
-import { XLogo } from "./components/XLogo";
-import { WormholeLogo } from "./components/WormholeLogo";
-import { RockawayLogo } from "./components/RockawayLogo";
-import { TrezorLogo } from "./components/TrezorLogo";
+import { LinkedinLogo } from "./components/logos/LinkedinLogo";
+import { GithubLogo } from "./components/logos/GithubLogo";
+import { XLogo } from "./components/logos/XLogo";
+import { WormholeLogo } from "./components/logos/WormholeLogo";
+import { RockawayLogo } from "./components/logos/RockawayLogo";
+import { TrezorLogo } from "./components/logos/TrezorLogo";
 import { A } from "./components/A";
-import { ObservatoryLogo } from "./components/ObservatoryLogo";
-import { MayanLogo } from "./components/MayanLogo";
+import { ObservatoryLogo } from "./components/logos/ObservatoryLogo";
+import { MayanLogo } from "./components/logos/MayanLogo";
 
 const aIconClass = "hover:scale-[1.15] duration-100 transition-transform";
 const aLogoClass = "hover:scale-[1.1] duration-100 transition-transform";

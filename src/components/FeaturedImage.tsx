@@ -1,5 +1,5 @@
 import { ProjectImage } from "../images";
-import { ExpandIcon } from "./ExpandIcon";
+import { ExpandIcon } from "./icons/ExpandIcon";
 import classes from "./FeturedImage.module.css";
 import cx from "clsx";
 
