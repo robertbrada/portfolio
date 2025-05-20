@@ -1,10 +1,7 @@
 import * as React from "react";
 import { useState, useRef } from "react";
 import { motion, useDomEvent } from "framer-motion";
-// import trezor from "../assets/images/trezor/chart.png";
-// import trezor from "../assets/images/trezor/transaction.png";
 import trezor from "../assets/images/trezor/trade.png";
-// import trezor from "../assets/images/croco/croco-landing.png";
 
 const transition = {
   type: "tween",

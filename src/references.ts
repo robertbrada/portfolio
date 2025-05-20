@@ -46,8 +46,8 @@ const references: Record<Project, Reference[]> = {
   [Project.Eigen]: [
     {
       type: "web",
-      link: "https://eigen.agent.tech/mainnet",
-      description: "eigen.agent.tech",
+      link: "https://eigen.rockawayx.app/mainnet",
+      description: "eigen.rockawayx.app",
     },
     {
       type: "web",

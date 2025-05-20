@@ -282,7 +282,7 @@ const descriptions: Record<Project, React.ReactNode> = {
           </p>
           <p className="mt-6">Robert</p>
           <div className="align-center my-16 mx-4">
-            <div className="grid grid-cols-3 gap-4 items-center justify-items-center">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 items-center justify-items-center">
               {/* <WormholeLogo className="w-44 sm:w-36 xs:w-28" /> */}
               <a
                 href="https://www.rockawayx.com/"
@@ -306,7 +306,7 @@ const descriptions: Record<Project, React.ReactNode> = {
                 <ObservatoryLogo className="w-32" />
               </a>
             </div>
-            <div className="grid grid-cols-2 gap-4 items-center justify-items-center my-6 mx-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 items-center justify-items-center mt-8 md:my-6 mx-20">
               <a
                 href="https://wormhole.com/"
                 target="_blank"
@@ -335,7 +335,7 @@ const descriptions: Record<Project, React.ReactNode> = {
             alt="Robert Brada"
             src={me}
           />
-          <section className="flex text-slate-400 text-xs font-light mt-4 space-x-2 pl-1 items-center justify-center">
+          <section className="flex text-slate-400 text-xs font-light mt-4 space-x-6 md:space-x-2 pl-1 items-center justify-center">
             <a
               href="https://x.com/0xrbrada"
               target="_blank"
