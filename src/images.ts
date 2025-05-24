@@ -24,7 +24,6 @@ import trezorChart from "./assets/images/trezor/chart.svg";
 import trexorEthTx from "./assets/images/trezor/eth-transaction.svg";
 import trezorWallet from "./assets/images/trezor/wallet.svg";
 import mayanApp from "./assets/images/mayan/mayan-app.png";
-import wormholeLogo from "./assets/images/wormhole/wormhole-logo.png";
 import wormholeApp from "./assets/images/wormhole/wormhole-app.png";
 import { Project } from "./types";
 
@@ -114,10 +113,8 @@ const images: Record<Project, ProjectImage[]> = {
     { src: stake1, border: false },
   ],
   [Project.RobertBrada]: [],
-  [Project.Wormhole]: [
-    { src: wormholeApp, border: false},
-  ],
-  [Project.Mayan]: [{src: mayanApp, border: false }],
+  [Project.Wormhole]: [{ src: wormholeApp, border: false }],
+  [Project.Mayan]: [{ src: mayanApp, border: false }],
 };
 
 export default images;
