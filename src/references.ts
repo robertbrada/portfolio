@@ -102,8 +102,20 @@ const references: Record<Project, Reference[]> = {
       description: "Demo video",
     },
   ],
-  [Project.Wormhole]: [],
-  [Project.Mayan]: [],
+  [Project.Wormhole]: [
+    {
+      type: "web",
+      link: "https://wormhole.com/",
+      description: "wormhole.com",
+    },
+  ],
+  [Project.Mayan]: [
+    {
+      type: "web",
+      link: "https://mayan.finance/",
+      description: "mayan.finance",
+    },
+  ],
 };
 
 export default references;

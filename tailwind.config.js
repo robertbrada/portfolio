@@ -32,7 +32,7 @@ export default {
         duo: "#238CE5",
         eigen: "#150958",
         wormhole: "#000000",
-        mayan: "#0000AA",
+        mayan: "#49a9f1",
         "text-primary": "#2D3748",
         "text-secondary": "#606d81",
         "text-tertiary": "#CBD5E0",

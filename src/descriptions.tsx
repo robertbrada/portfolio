@@ -89,8 +89,9 @@ const descriptions: Record<Project, React.ReactNode> = {
       <A project={Project.DuoCards} href="https://duocards.com/en/">
         duocards.com
       </A>{" "}
-      to make it more appealing to users. I present it here as my attempt to
-      create something non-technical, outside of the crypto space.{" "}
+      to make it more appealing to users.
+      {/* I present it here as my attempt to
+      create something non-technical, outside of the crypto space.{" "} */}
     </div>
   ),
   [Project.Eigen]: (
@@ -370,10 +371,28 @@ const descriptions: Record<Project, React.ReactNode> = {
   ),
   [Project.Wormhole]: (
     <div>
-      At RockawayX we build solver for Wormhole's Fast Transfer protocol.
+      At RockawayX we've made a deal with{" "}
+      <A project={Project.Wormhole} href="https://wormhole.com/">
+        Wormhole
+      </A>{" "}
+      to build a solver for their <i>Wormhole Fast Transfers</i> protocol. This
+      protocol enables USDC transfers across chains within ~ 30 seconds. We
+      built a software that provides liquidity and interacts with Solana
+      programs to allow just that.
     </div>
   ),
-  [Project.Mayan]: <div>At RockawayX we build solver for Mayan bridge.</div>,
+  [Project.Mayan]: (
+    <div>
+      RockawayX made a deal with{" "}
+      <A project={Project.Mayan} href="https://mayan.finance/">
+        Mayan
+      </A>{" "}
+      to boostrap their cross-chain bridge. RockawayX provided initial liquidity
+      and we've built a largest solver transferring millions of USD value in
+      daily volumes. The solver is a software interacting with Solana and EVM
+      smart contracts and rebalances USDC and ETH between its wallets.
+    </div>
+  ),
 };
 
 export default descriptions;
