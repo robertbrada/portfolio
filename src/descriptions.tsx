@@ -9,6 +9,7 @@ import { TrezorLogo } from "./components/logos/TrezorLogo";
 import { A } from "./components/A";
 import { ObservatoryLogo } from "./components/logos/ObservatoryLogo";
 import { MayanLogo } from "./components/logos/MayanLogo";
+import { AztecLogo } from "./components/logos/AztecLogo";
 
 const aIconClass = "hover:scale-[1.15] duration-100 transition-transform";
 const aLogoClass = "hover:scale-[1.1] duration-100 transition-transform";
@@ -307,7 +308,7 @@ const descriptions: Record<Project, React.ReactNode> = {
                 <ObservatoryLogo className="w-32" />
               </a>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-4 items-center justify-items-center mt-8 md:my-6 mx-20">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 items-center justify-items-center mt-8 md:my-6">
               <a
                 href="https://wormhole.com/"
                 target="_blank"
@@ -321,6 +322,13 @@ const descriptions: Record<Project, React.ReactNode> = {
                 className={aLogoClass}
               >
                 <MayanLogo className="w-24" />
+              </a>
+              <a
+                href="https://aztec.network/"
+                target="_blank"
+                className={aLogoClass}
+              >
+                <AztecLogo className="w-20" />
               </a>
             </div>
             {/* <div className="grid grid-cols-3 gap-4 items-center justify-items-center">
