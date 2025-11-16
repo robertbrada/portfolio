@@ -9,6 +9,7 @@ import references from "../references";
 import { Gallery } from "./Gallery";
 import { References } from "./References";
 import { ProfileSection } from "./ProfileSection";
+import { LogosSection } from "./LogosSection";
 
 interface ContentProps {
   selectedProject: Project;
@@ -108,6 +109,8 @@ export function Content({ selectedProject }: ContentProps) {
           ) : null}
         </div>
       </div>
+
+      {selectedProject === "Robert Brada" && <LogosSection />}
 
       {galleryOpen && (
         <div

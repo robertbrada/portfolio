@@ -1,13 +1,11 @@
 import { Project } from "./types";
-import { WormholeLogo } from "./components/logos/WormholeLogo";
-import { RockawayLogo } from "./components/logos/RockawayLogo";
-import { TrezorLogo } from "./components/logos/TrezorLogo";
 import { A } from "./components/A";
-import { ObservatoryLogo } from "./components/logos/ObservatoryLogo";
-import { MayanLogo } from "./components/logos/MayanLogo";
-import { AztecLogo } from "./components/logos/AztecLogo";
+import { LinkedinLogo } from "./components/logos/LinkedinLogo";
+import { GithubLogo } from "./components/logos/GithubLogo";
+import { XLogo } from "./components/logos/XLogo";
 
-const aLogoClass = "hover:scale-[1.1] duration-100 transition-transform";
+const aIconClass = "hover:scale-[1.15] duration-100 transition-transform";
+const iconHoverClasses = "px-1 py-1";
 
 const descriptions: Record<Project, React.ReactNode> = {
   [Project.Trezor]: (
@@ -275,56 +273,35 @@ const descriptions: Record<Project, React.ReactNode> = {
         .
       </p>
       <p className="mt-6">Robert</p>
-      <div className="align-center my-16 mx-4">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 items-center justify-items-center">
-          {/* <WormholeLogo className="w-44 sm:w-36 xs:w-28" /> */}
-          <a
-            href="https://www.rockawayx.com/"
-            target="_blank"
-            className={aLogoClass}
-          >
-            <RockawayLogo className={`w-[6.3rem]`} />
-          </a>
-          <a href="https://trezor.io/" target="_blank" className={aLogoClass}>
-            <TrezorLogo className="w-20" />
-          </a>
-          <a
-            href="https://observatory.zone/"
-            target="_blank"
-            className={aLogoClass}
-          >
-            <ObservatoryLogo className="w-32" />
-          </a>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 items-center justify-items-center mt-8 md:my-6">
-          <a
-            href="https://wormhole.com/"
-            target="_blank"
-            className={aLogoClass}
-          >
-            <WormholeLogo className="w-28" />
-          </a>
-          <a
-            href="https://mayan.finance/"
-            target="_blank"
-            className={aLogoClass}
-          >
-            <MayanLogo className="w-24" />
-          </a>
-          <a
-            href="https://aztec.network/"
-            target="_blank"
-            className={aLogoClass}
-          >
-            <AztecLogo className="w-20" />
-          </a>
-        </div>
-        {/* <div className="grid grid-cols-3 gap-4 items-center justify-items-center">
-          <div />
-          <DebridgeLogo className="w-[7rem]" />
-          <div />
-        </div> */}
-      </div>
+      <section className="flex text-slate-400 text-xs font-light gap-3 items-center justify-start mt-10">
+        <a
+          href="https://x.com/0xrbrada"
+          target="_blank"
+          className={aIconClass}
+        >
+          <XLogo
+            className={`h-[1.4rem] w-auto display:inline-block cursor-pointer ${iconHoverClasses}`}
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/robert-brada-252474112/"
+          target="_blank"
+          className={aIconClass}
+        >
+          <LinkedinLogo
+            className={`h-[1.6rem] w-auto display:inline-block cursor-pointer ${iconHoverClasses}`}
+          />
+        </a>
+        <a
+          href="https://github.com/robertbrada"
+          target="_blank"
+          className={aIconClass}
+        >
+          <GithubLogo
+            className={`h-[1.6rem] w-auto display:inline-block cursor-pointer ${iconHoverClasses}`}
+          />
+        </a>
+      </section>
     </div>
   ),
   [Project.Wormhole]: (
