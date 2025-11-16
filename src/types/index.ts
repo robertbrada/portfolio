@@ -4,7 +4,7 @@ export enum Project {
   SDP = "Smart Delegation App",
   Observatory = "Observatory",
   CrocoFinance = "Croco Finance",
-  Trezor = "Trezor",
+  Satoshilabs = "Satoshilabs",
   DuoCards = "DuoCards",
   Eigen = "EigenBeat",
   Wormhole = "Wormhole",

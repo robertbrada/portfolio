@@ -30,7 +30,7 @@ const classesByProject: Record<Project, { default: string; selected: string }> =
       default: `${sharedClasses} hover:text-croco hover:bg-croco/10`,
       selected: `${sharedSelectedClasses} bg-croco`,
     },
-    [Project.Trezor]: {
+    [Project.Satoshilabs]: {
       default: `${sharedClasses} hover:text-trezor hover:bg-trezor/10`,
       selected: `${sharedSelectedClasses} bg-trezor`,
     },
@@ -142,9 +142,9 @@ export const MenuItems = ({ selected, onSelected }: MenuItemsProps) => {
       <div className={dateClasses}>2020</div>
       <ul>
         <ProjectItem
-          name={Project.Trezor}
+          name={Project.Satoshilabs}
           onClick={onSelected}
-          selected={selected === Project.Trezor}
+          selected={selected === Project.Satoshilabs}
         />
       </ul>
     </section>

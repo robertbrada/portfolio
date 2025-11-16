@@ -1,7 +1,7 @@
 import { Project } from "../types";
 
 const colorClasses: Record<Project, string> = {
-  [Project.Trezor]: "text-[#03854D]",
+  [Project.Satoshilabs]: "text-[#03854D]",
   [Project.CrocoFinance]: "text-[#8fbe20]",
   [Project.DuoCards]: "text-[#4ebbf2]",
   [Project.Eigen]: "text-[#4a63e8]",

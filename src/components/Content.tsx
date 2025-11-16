@@ -21,7 +21,7 @@ const colorsByProject: Record<Project, string> = {
   [Project.Observatory]: "text-observatory",
   [Project.SDP]: "text-sdp",
   [Project.CrocoFinance]: "text-croco",
-  [Project.Trezor]: "text-trezor",
+  [Project.Satoshilabs]: "text-trezor",
   [Project.DuoCards]: "text-duo",
   [Project.Eigen]: "text-eigen",
   [Project.Wormhole]: "text-wormhole",
@@ -57,7 +57,7 @@ export function Content({ selectedProject }: ContentProps) {
   }, []);
 
   return (
-    <main className="py-4 px-4 text-left lg:py-10 lg:px-14">
+    <main className="pt-4 pb-20 px-4 text-left lg:py-10 lg:px-14">
       <div className={`mb-6 ${colorsByProject[selectedProject]}`}>
         {selectedProject === "Robert Brada" ? (
           <PersonalPage />
@@ -81,7 +81,9 @@ export function Content({ selectedProject }: ContentProps) {
       >
         <div
           className={
-            selectedProject === "Robert Brada" ? "col-span-4 pr-8" : "col-span-3"
+            selectedProject === "Robert Brada"
+              ? "col-span-4 pr-8"
+              : "col-span-3"
           }
         >
           <div className="mb-6 text-justify">
@@ -110,7 +112,14 @@ export function Content({ selectedProject }: ContentProps) {
         </div>
       </div>
 
-      {selectedProject === "Robert Brada" && <LogosSection />}
+      {selectedProject === "Robert Brada" && (
+        <div>
+          <div className="mb-8 text-xs opacity-50" style={{fontFamily: "monospace"}}>
+            Companies/Projects I've collaborated with
+          </div>
+          <LogosSection />
+        </div>
+      )}
 
       {galleryOpen && (
         <div

@@ -34,7 +34,7 @@ export interface ProjectImage {
 }
 
 const images: Record<Project, ProjectImage[]> = {
-  [Project.Trezor]: [
+  [Project.Satoshilabs]: [
     { src: trexorEthTx, border: true },
     { src: trezorChart, border: false },
     { src: trezorWallet, border: false },

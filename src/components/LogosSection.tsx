@@ -1,6 +1,6 @@
 import { WormholeLogo } from "./logos/WormholeLogo";
 import { RockawayLogo } from "./logos/RockawayLogo";
-import { TrezorLogo } from "./logos/TrezorLogo";
+import { SatoshilabsLogo } from "./logos/SatoshilabsLogo";
 import { ObservatoryLogo } from "./logos/ObservatoryLogo";
 import { MayanLogo } from "./logos/MayanLogo";
 import { AztecLogo } from "./logos/AztecLogo";
@@ -10,7 +10,7 @@ const aLogoClass =
 
 export function LogosSection() {
   return (
-    <div className="flex flex-wrap justify-start items-center gap-14 mt-20 mb-4">
+    <div className="flex flex-wrap justify-start items-center gap-x-16 gap-y-10">
       <a
         href="https://www.rockawayx.com/"
         target="_blank"
@@ -22,7 +22,7 @@ export function LogosSection() {
         <AztecLogo className="w-32" />
       </a>
       <a href="https://trezor.io/" target="_blank" className={aLogoClass}>
-        <TrezorLogo className="w-32" />
+        <SatoshilabsLogo className="w-44" />
       </a>
       <a
         href="https://observatory.zone/"
