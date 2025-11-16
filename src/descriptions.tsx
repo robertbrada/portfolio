@@ -90,7 +90,7 @@ const descriptions: Record<Project, React.ReactNode> = {
   [Project.Eigen]: (
     <div>
       <p>
-        This app was created a support project for the the{' '}
+        This app was created as a support project for the{' '}
         <A project={Project.Eigen} href="https://www.eigenlayer.xyz/">
           EigenLayer
         </A>{' '}
@@ -129,7 +129,7 @@ const descriptions: Record<Project, React.ReactNode> = {
         <A project={Project.Observatory} href="https://rockawayx.com/">
           RockawayX
         </A>{' '}
-        . I was working in the frontend team since it's inception. app is
+        . I was working in the frontend team since its inception. The app is
         complex and building it required a team effort during my stay at{' '}
         <A project={Project.Observatory} href="https://rockawayx.com/">
           RockawayX
@@ -193,7 +193,7 @@ const descriptions: Record<Project, React.ReactNode> = {
         </A>{' '}
         networks for users who didn't want to deal with choosing a validator
         they would delegate their cryptocurrency to. The app picks the best
-        validators (in terms of APR and decentralization) for the users. Is is
+        validators (in terms of APR and decentralization) for the users. It is
         built on top of the{' '}
         <A project={Project.StakeBar} href="https://observatory.zone/">
           Observatory
@@ -227,7 +227,7 @@ const descriptions: Record<Project, React.ReactNode> = {
         <A project={Project.RobertBrada} href="https://satoshilabs.com/">
           SatoshiLabs
         </A>
-        , the invertor of{' '}
+        , the inventor of{' '}
         <A
           project={Project.RobertBrada}
           href="https://trezor.io/?gclsrc=aw.ds&&utm_source=google&gad_source=1&gad_campaignid=20810887858&gbraid=0AAAAAClLb_tFxu1eFC-IlIHAo3gOIiFPe&utm_medium=cpc&utm_campaign=PMax%20%7C%20Feed%20%7C%20CZ&utm_id=20800700799&gclid=CjwKCAjwravBBhBjEiwAIr30VM7Xp3xUJl7RC2c2El2LxjNkwpFBZa-9ZEXGWTvONWMC7SOQ6BWSxRoCMHgQAvD_BwE"
@@ -258,7 +258,7 @@ const descriptions: Record<Project, React.ReactNode> = {
         great colleagues.
       </p>
       <p className="mt-2">
-        If you have an idea about possible collaboration, I would't love to hear
+        If you have an idea about possible collaboration, I would love to hear
         about it. Leave me a message on{' '}
         <A project={Project.RobertBrada} href="https://x.com/0xrbrada">
           X
