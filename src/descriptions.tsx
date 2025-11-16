@@ -1,5 +1,5 @@
 import { Project } from "./types";
-import me from "./assets/images/robert/ja-cropped.jpg";
+import me from "./assets/images/robert/aztec-profile-photo.jpg";
 import { LinkedinLogo } from "./components/logos/LinkedinLogo";
 import { GithubLogo } from "./components/logos/GithubLogo";
 import { XLogo } from "./components/logos/XLogo";
@@ -330,7 +330,7 @@ const descriptions: Record<Project, React.ReactNode> = {
             </div> */}
           </div>
         </div>
-        <div className="mt-2 flex-grow basis-1/4">
+        <div className="mt-2 flex-grow basis-1/3">
           <img
             className="rounded-md mx-auto max-w-60 md:max-w-full h-auto"
             alt="Robert Brada"
