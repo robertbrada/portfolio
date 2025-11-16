@@ -4,7 +4,7 @@ import { motion, useDomEvent } from "framer-motion";
 import trezor from "../assets/images/trezor/trade.png";
 
 const transition = {
-  type: "tween",
+  type: "spring" as const,
   damping: 25,
   stiffness: 200,
 };
