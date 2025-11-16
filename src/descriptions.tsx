@@ -1,8 +1,4 @@
 import { Project } from "./types";
-import me from "./assets/images/robert/aztec-profile-photo.jpg";
-import { LinkedinLogo } from "./components/logos/LinkedinLogo";
-import { GithubLogo } from "./components/logos/GithubLogo";
-import { XLogo } from "./components/logos/XLogo";
 import { WormholeLogo } from "./components/logos/WormholeLogo";
 import { RockawayLogo } from "./components/logos/RockawayLogo";
 import { TrezorLogo } from "./components/logos/TrezorLogo";
@@ -11,9 +7,7 @@ import { ObservatoryLogo } from "./components/logos/ObservatoryLogo";
 import { MayanLogo } from "./components/logos/MayanLogo";
 import { AztecLogo } from "./components/logos/AztecLogo";
 
-const aIconClass = "hover:scale-[1.15] duration-100 transition-transform";
 const aLogoClass = "hover:scale-[1.1] duration-100 transition-transform";
-const iconHoverClasses = "px-1 py-1 ";
 
 const descriptions: Record<Project, React.ReactNode> = {
   [Project.Trezor]: (
@@ -226,154 +220,110 @@ const descriptions: Record<Project, React.ReactNode> = {
   ),
   [Project.RobertBrada]: (
     <div>
-      <div className="flex flex-col md:flex-row gap-10">
-        <div className="text-justify flex-grow basis-3/4">
-          <p>
-            {/* Happy to see you on my portfolio page!  */}
-            {/* I create wireframes in Figma, build the MVP and then I iterate on it as we see the needs. */}
-            I'm a software engineer from Prague. I joined the crypto community
-            in 2018 after attending DevCon4 Ethereum conference. After
-            university, I worked in{" "}
-            <A project={Project.RobertBrada} href="https://satoshilabs.com/">
-              SatoshiLabs
-            </A>
-            , the invertor of{" "}
-            <A
-              project={Project.RobertBrada}
-              href="https://trezor.io/?gclsrc=aw.ds&&utm_source=google&gad_source=1&gad_campaignid=20810887858&gbraid=0AAAAAClLb_tFxu1eFC-IlIHAo3gOIiFPe&utm_medium=cpc&utm_campaign=PMax%20%7C%20Feed%20%7C%20CZ&utm_id=20800700799&gclid=CjwKCAjwravBBhBjEiwAIr30VM7Xp3xUJl7RC2c2El2LxjNkwpFBZa-9ZEXGWTvONWMC7SOQ6BWSxRoCMHgQAvD_BwE"
-            >
-              Trezor
-            </A>{" "}
-            wallet. One year later, I joined{" "}
-            <A project={Project.RobertBrada} href="https://rockawayx.com/">
-              RockawayX
-            </A>{" "}
-            as a founding member of its engineering division. We started
-            developing staking tools for Cosmos blockchains. Currently, we're
-            running solvers and bridging millions of USD value daily through{" "}
-            <A project={Project.RobertBrada} href="https://wormhole.com/">
-              Wormhole
-            </A>{" "}
-            and{" "}
-            <A project={Project.RobertBrada} href="https://mayan.finance/">
-              Mayan
-            </A>{" "}
-            cross-chain bridges.
-            {/* running staking services and own developer studio. */}
-            {/* I was a founding member of its developer studio */}
-          </p>
-          <p className="mt-2">
-            I get driven by building products that are used by real people. This
-            site highlights work I’ve done on my own and in collaboration with
-            my great colleagues.
-          </p>
-          <p className="mt-2">
-            If you have an idea about possible collaboration, I would't love to
-            hear about it. Leave me a message on{" "}
-            <A project={Project.RobertBrada} href="https://x.com/0xrbrada">
-              X
-            </A>{" "}
-            or{" "}
-            <A
-              project={Project.RobertBrada}
-              href="https://www.linkedin.com/in/robert-brada-252474112/"
-            >
-              LinkedIn
-            </A>
-            .
-          </p>
-          <p className="mt-6">Robert</p>
-          <div className="align-center my-16 mx-4">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 items-center justify-items-center">
-              {/* <WormholeLogo className="w-44 sm:w-36 xs:w-28" /> */}
-              <a
-                href="https://www.rockawayx.com/"
-                target="_blank"
-                className={aLogoClass}
-              >
-                <RockawayLogo className={`w-[6.3rem]`} />
-              </a>
-              <a
-                href="https://trezor.io/"
-                target="_blank"
-                className={aLogoClass}
-              >
-                <TrezorLogo className="w-20" />
-              </a>
-              <a
-                href="https://observatory.zone/"
-                target="_blank"
-                className={aLogoClass}
-              >
-                <ObservatoryLogo className="w-32" />
-              </a>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 items-center justify-items-center mt-8 md:my-6">
-              <a
-                href="https://wormhole.com/"
-                target="_blank"
-                className={aLogoClass}
-              >
-                <WormholeLogo className="w-28" />
-              </a>
-              <a
-                href="https://mayan.finance/"
-                target="_blank"
-                className={aLogoClass}
-              >
-                <MayanLogo className="w-24" />
-              </a>
-              <a
-                href="https://aztec.network/"
-                target="_blank"
-                className={aLogoClass}
-              >
-                <AztecLogo className="w-20" />
-              </a>
-            </div>
-            {/* <div className="grid grid-cols-3 gap-4 items-center justify-items-center">
-              <div />
-              <DebridgeLogo className="w-[7rem]" />
-              <div />
-            </div> */}
-          </div>
+      <p>
+        {/* Happy to see you on my portfolio page!  */}
+        {/* I create wireframes in Figma, build the MVP and then I iterate on it as we see the needs. */}
+        I'm a software engineer from Prague. I joined the crypto community in
+        2018 after attending DevCon4 Ethereum conference. After university, I
+        worked in{" "}
+        <A project={Project.RobertBrada} href="https://satoshilabs.com/">
+          SatoshiLabs
+        </A>
+        , the invertor of{" "}
+        <A
+          project={Project.RobertBrada}
+          href="https://trezor.io/?gclsrc=aw.ds&&utm_source=google&gad_source=1&gad_campaignid=20810887858&gbraid=0AAAAAClLb_tFxu1eFC-IlIHAo3gOIiFPe&utm_medium=cpc&utm_campaign=PMax%20%7C%20Feed%20%7C%20CZ&utm_id=20800700799&gclid=CjwKCAjwravBBhBjEiwAIr30VM7Xp3xUJl7RC2c2El2LxjNkwpFBZa-9ZEXGWTvONWMC7SOQ6BWSxRoCMHgQAvD_BwE"
+        >
+          Trezor
+        </A>{" "}
+        wallet. One year later, I joined{" "}
+        <A project={Project.RobertBrada} href="https://rockawayx.com/">
+          RockawayX
+        </A>{" "}
+        as a founding member of its engineering division. We started developing
+        staking tools for Cosmos blockchains. Currently, we're running solvers
+        and bridging millions of USD value daily through{" "}
+        <A project={Project.RobertBrada} href="https://wormhole.com/">
+          Wormhole
+        </A>{" "}
+        and{" "}
+        <A project={Project.RobertBrada} href="https://mayan.finance/">
+          Mayan
+        </A>{" "}
+        cross-chain bridges.
+        {/* running staking services and own developer studio. */}
+        {/* I was a founding member of its developer studio */}
+      </p>
+      <p className="mt-2">
+        I get driven by building products that are used by real people. This
+        site highlights work I've done on my own and in collaboration with my
+        great colleagues.
+      </p>
+      <p className="mt-2">
+        If you have an idea about possible collaboration, I would't love to hear
+        about it. Leave me a message on{" "}
+        <A project={Project.RobertBrada} href="https://x.com/0xrbrada">
+          X
+        </A>{" "}
+        or{" "}
+        <A
+          project={Project.RobertBrada}
+          href="https://www.linkedin.com/in/robert-brada-252474112/"
+        >
+          LinkedIn
+        </A>
+        .
+      </p>
+      <p className="mt-6">Robert</p>
+      <div className="align-center my-16 mx-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 items-center justify-items-center">
+          {/* <WormholeLogo className="w-44 sm:w-36 xs:w-28" /> */}
+          <a
+            href="https://www.rockawayx.com/"
+            target="_blank"
+            className={aLogoClass}
+          >
+            <RockawayLogo className={`w-[6.3rem]`} />
+          </a>
+          <a href="https://trezor.io/" target="_blank" className={aLogoClass}>
+            <TrezorLogo className="w-20" />
+          </a>
+          <a
+            href="https://observatory.zone/"
+            target="_blank"
+            className={aLogoClass}
+          >
+            <ObservatoryLogo className="w-32" />
+          </a>
         </div>
-        <div className="mt-2 flex-grow basis-1/3">
-          <img
-            className="rounded-md mx-auto max-w-60 md:max-w-full h-auto"
-            alt="Robert Brada"
-            src={me}
-          />
-          <section className="flex text-slate-400 text-xs font-light mt-4 space-x-6 md:space-x-2 pl-1 items-center justify-center">
-            <a
-              href="https://x.com/0xrbrada"
-              target="_blank"
-              className={aIconClass}
-            >
-              <XLogo
-                className={`h-[1.4rem] w-auto display:inline-block cursor-pointer ${iconHoverClasses} `}
-              />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/robert-brada-252474112/"
-              target="_blank"
-              className={aIconClass}
-            >
-              <LinkedinLogo
-                className={`h-[1.6rem] w-auto display:inline-block cursor-pointer ${iconHoverClasses}`}
-              />
-            </a>
-            <a
-              href="https://github.com/robertbrada"
-              target="_blank"
-              className={aIconClass}
-            >
-              <GithubLogo
-                className={`h-[1.6rem] w-auto display:inline-block cursor-pointer ${iconHoverClasses}`}
-              />
-            </a>
-          </section>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 items-center justify-items-center mt-8 md:my-6">
+          <a
+            href="https://wormhole.com/"
+            target="_blank"
+            className={aLogoClass}
+          >
+            <WormholeLogo className="w-28" />
+          </a>
+          <a
+            href="https://mayan.finance/"
+            target="_blank"
+            className={aLogoClass}
+          >
+            <MayanLogo className="w-24" />
+          </a>
+          <a
+            href="https://aztec.network/"
+            target="_blank"
+            className={aLogoClass}
+          >
+            <AztecLogo className="w-20" />
+          </a>
         </div>
+        {/* <div className="grid grid-cols-3 gap-4 items-center justify-items-center">
+          <div />
+          <DebridgeLogo className="w-[7rem]" />
+          <div />
+        </div> */}
       </div>
     </div>
   ),

@@ -8,6 +8,7 @@ import images from "../images";
 import references from "../references";
 import { Gallery } from "./Gallery";
 import { References } from "./References";
+import { ProfileSection } from "./ProfileSection";
 
 interface ContentProps {
   selectedProject: Project;
@@ -71,9 +72,17 @@ export function Content({ selectedProject }: ContentProps) {
       </div>
       <div
         id="description"
-        className="text-text-secondary mb-6 flex flex-col gap-10 xl:grid xl:grid-cols-4"
+        className={`text-text-secondary mb-6 flex flex-col gap-10 ${
+          selectedProject === "Robert Brada"
+            ? "xl:grid xl:grid-cols-6"
+            : "xl:grid xl:grid-cols-4"
+        }`}
       >
-        <div className="col-span-3">
+        <div
+          className={
+            selectedProject === "Robert Brada" ? "col-span-4 pr-8" : "col-span-3"
+          }
+        >
           <div className="mb-6 text-justify">
             {descriptions[selectedProject]}
           </div>
@@ -85,8 +94,16 @@ export function Content({ selectedProject }: ContentProps) {
           )}
         </div>
 
-        <div className="col-span-1 pt-4 h-min xl:border-t-[0px] xl:border-l-[1px] xl:pl-8 xl:pt-0">
-          {references[selectedProject].length ? (
+        <div
+          className={`pt-4 h-min xl:pt-0 ${
+            selectedProject === "Robert Brada"
+              ? "col-span-2 xl:border-t-[0px] xl:border-l-[0px] xl:pl-0"
+              : "col-span-1 xl:border-t-[0px] xl:border-l-[1px] xl:pl-8"
+          }`}
+        >
+          {selectedProject === "Robert Brada" ? (
+            <ProfileSection />
+          ) : references[selectedProject].length ? (
             <References references={references[selectedProject]} />
           ) : null}
         </div>
