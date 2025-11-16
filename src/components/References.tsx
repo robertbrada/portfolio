@@ -1,11 +1,11 @@
-import { GithubLogo } from "./logos/GithubLogo";
-import { LoomLogo } from "./logos/LoomLogo";
-import { MediumLogo } from "./logos/MediumLogo";
-import { WebsiteIcon } from "./icons/WebsiteIcon";
-import { XLogo } from "./logos/XLogo";
-import { YouTubeLogo } from "./logos/YouTubeLogo";
+import { GithubLogo } from './logos/GithubLogo';
+import { LoomLogo } from './logos/LoomLogo';
+import { MediumLogo } from './logos/MediumLogo';
+import { WebsiteIcon } from './icons/WebsiteIcon';
+import { XLogo } from './logos/XLogo';
+import { YouTubeLogo } from './logos/YouTubeLogo';
 
-type ReferenceType = "github" | "web" | "loom" | "youtube" | "medium" | "x";
+type ReferenceType = 'github' | 'web' | 'loom' | 'youtube' | 'medium' | 'x';
 
 export interface Reference {
   type: ReferenceType;
@@ -17,9 +17,9 @@ interface ReferencesProps {
   references: Reference[];
 }
 const aIconClass =
-  "hover:text-text-primary hover:scale-[1.02] duration-100 transition-transform flex items-center gap-1.5 text-sm w-fit";
+  'hover:text-text-primary hover:scale-[1.02] duration-100 transition-transform flex items-center gap-1.5 text-sm w-fit';
 
-const iconCommonClassName = "w-[1rem] cursor-pointer my-2";
+const iconCommonClassName = 'w-[1rem] cursor-pointer my-2';
 const icons: Record<ReferenceType, React.ReactNode> = {
   github: <GithubLogo className={`h-[0.75rem] ${iconCommonClassName}`} />,
   loom: <LoomLogo className={`h-[0.75rem]  ${iconCommonClassName}`} />,

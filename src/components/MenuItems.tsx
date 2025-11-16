@@ -1,4 +1,4 @@
-import { Project } from "../types";
+import { Project } from '../types';
 
 interface ProjectItemProps {
   selected: boolean;
@@ -6,10 +6,10 @@ interface ProjectItemProps {
   onClick: (name: Project) => void;
 }
 
-const dateClasses = "font-bold text-xs px-2 mt-8 mb-2 text-[#151515]";
+const dateClasses = 'font-bold text-xs px-2 mt-8 mb-2 text-[#151515]';
 
 const sharedClasses =
-  "my-0.5 py-0.5 px-2 w-fit rounded-md text-left text-sm hover:scale-[1.08] transition-all hover:font-medium duration-100 hover:translate-y-[-1px] text-text-secondary font-normal";
+  'my-0.5 py-0.5 px-2 w-fit rounded-md text-left text-sm hover:scale-[1.08] transition-all hover:font-medium duration-100 hover:translate-y-[-1px] text-text-secondary font-normal';
 const sharedSelectedClasses = `${sharedClasses} scale-[1.08] font-medium text-white`;
 
 const classesByProject: Record<Project, { default: string; selected: string }> =

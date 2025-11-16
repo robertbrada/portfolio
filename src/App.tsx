@@ -1,9 +1,9 @@
-import { useState } from "react";
-import "./App.css";
-import { Content } from "./components/Content";
-import { SideBar } from "./components/SideBar";
-import { Project } from "./types";
-import { MobileMenu } from "./components/MobileMenu";
+import { useState } from 'react';
+import './App.css';
+import { Content } from './components/Content';
+import { SideBar } from './components/SideBar';
+import { Project } from './types';
+import { MobileMenu } from './components/MobileMenu';
 
 function App() {
   const [selectedProject, setSelectedProject] = useState<Project>(

@@ -1,11 +1,11 @@
-import cx from "clsx";
-import { AnimatePresence, motion } from "framer-motion";
-import { wrap } from "popmotion";
-import * as React from "react";
-import { useState } from "react";
-import classes from "./Gallery.module.css";
-import { ProjectImage } from "../images";
-import { InfoIcon } from "./icons/InfoIcon";
+import cx from 'clsx';
+import { AnimatePresence, motion } from 'framer-motion';
+import { wrap } from 'popmotion';
+import * as React from 'react';
+import { useState } from 'react';
+import classes from './Gallery.module.css';
+import { ProjectImage } from '../images';
+import { InfoIcon } from './icons/InfoIcon';
 
 const variants = {
   enter: (direction: number) => {
@@ -62,9 +62,9 @@ export const Gallery = ({ images, firstImage }: GalleryProps) => {
 
   // Function to handle the Escape key press
   const handleKeyDown = (event: { key: string }) => {
-    if (event.key === "ArrowRight") {
+    if (event.key === 'ArrowRight') {
       paginate(1);
-    } else if (event.key === "ArrowLeft") {
+    } else if (event.key === 'ArrowLeft') {
       paginate(-1);
     }
     // TODO close on Escape
@@ -72,11 +72,11 @@ export const Gallery = ({ images, firstImage }: GalleryProps) => {
 
   // Adding the event listener for keydown when the component mounts
   React.useEffect(() => {
-    document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener('keydown', handleKeyDown);
 
     // Clean up the event listener when the component unmounts
     return () => {
-      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener('keydown', handleKeyDown);
     };
   }, [paginate]);
 
@@ -86,7 +86,7 @@ export const Gallery = ({ images, firstImage }: GalleryProps) => {
         <motion.div
           className={cx(
             classes.container,
-            "gallery-img gap-1 flex flex-col rounded-sm"
+            'gallery-img gap-1 flex flex-col rounded-sm'
           )}
           key={page}
           custom={direction}
@@ -95,7 +95,7 @@ export const Gallery = ({ images, firstImage }: GalleryProps) => {
           animate="center"
           exit="exit"
           transition={{
-            x: { type: "spring", stiffness: 300, damping: 30 },
+            x: { type: 'spring', stiffness: 300, damping: 30 },
             opacity: { duration: 0.2 },
           }}
           drag="x"
@@ -112,15 +112,23 @@ export const Gallery = ({ images, firstImage }: GalleryProps) => {
           }}
         >
           <img
-            className={cx(classes.img, "rounded-sm")}
+            className={cx(classes.img, 'rounded-sm')}
             src={images[imageIndex].src}
           />
           {images[imageIndex].description && (
-            <div className={cx(classes.middle, "px-2 py-1 rounded-md hidden md:flex")}>
-              <div className={cx(classes.text, "flex justify-between items-center")}>
-                <span className="">
-                  {images[imageIndex].description}
-                </span>
+            <div
+              className={cx(
+                classes.middle,
+                'px-2 py-1 rounded-md hidden md:flex'
+              )}
+            >
+              <div
+                className={cx(
+                  classes.text,
+                  'flex justify-between items-center'
+                )}
+              >
+                <span className="">{images[imageIndex].description}</span>
                 <InfoIcon className="h-[1rem] w-auto" />
               </div>
             </div>
@@ -128,10 +136,10 @@ export const Gallery = ({ images, firstImage }: GalleryProps) => {
         </motion.div>
       </AnimatePresence>
       <div className="next" onClick={() => paginate(1)}>
-        {"‣"}
+        {'‣'}
       </div>
       <div className="prev" onClick={() => paginate(-1)}>
-        {"‣"}
+        {'‣'}
       </div>
     </>
   );

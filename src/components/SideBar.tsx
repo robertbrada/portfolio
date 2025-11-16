@@ -1,6 +1,6 @@
-import { Project } from "../types";
-import { MenuItems } from "./MenuItems";
-import me from "/favicon-punk.svg";
+import { Project } from '../types';
+import { MenuItems } from './MenuItems';
+import me from '/favicon-punk.svg';
 
 interface SideBarProps {
   selected: Project;

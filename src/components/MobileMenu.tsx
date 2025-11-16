@@ -1,8 +1,8 @@
-import { useState } from "react";
-import { MenuIcon } from "./icons/MenuIcon";
-import { MenuItems } from "./MenuItems";
-import me from "/favicon-punk.svg";
-import { Project } from "../types";
+import { useState } from 'react';
+import { MenuIcon } from './icons/MenuIcon';
+import { MenuItems } from './MenuItems';
+import me from '/favicon-punk.svg';
+import { Project } from '../types';
 
 interface MobileMenuProps {
   className?: string;

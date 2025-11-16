@@ -1,31 +1,31 @@
-import "react-medium-image-zoom/dist/styles.css";
-import { Project } from "../types";
-import { FeaturedImage } from "./FeaturedImage";
-import { PersonalPage } from "./PersonalPage";
-import { useEffect, useState } from "react";
-import descriptions from "../descriptions";
-import images from "../images";
-import references from "../references";
-import { Gallery } from "./Gallery";
-import { References } from "./References";
-import { ProfileSection } from "./ProfileSection";
-import { LogosSection } from "./LogosSection";
+import 'react-medium-image-zoom/dist/styles.css';
+import { Project } from '../types';
+import { FeaturedImage } from './FeaturedImage';
+import { PersonalPage } from './PersonalPage';
+import { useEffect, useState } from 'react';
+import descriptions from '../descriptions';
+import images from '../images';
+import references from '../references';
+import { Gallery } from './Gallery';
+import { References } from './References';
+import { ProfileSection } from './ProfileSection';
+import { LogosSection } from './LogosSection';
 
 interface ContentProps {
   selectedProject: Project;
 }
 
 const colorsByProject: Record<Project, string> = {
-  [Project.RobertBrada]: "text-robert",
-  [Project.StakeBar]: "text-stakebar",
-  [Project.Observatory]: "text-observatory",
-  [Project.SDP]: "text-sdp",
-  [Project.CrocoFinance]: "text-croco",
-  [Project.Satoshilabs]: "text-trezor",
-  [Project.DuoCards]: "text-duo",
-  [Project.Eigen]: "text-eigen",
-  [Project.Wormhole]: "text-wormhole",
-  [Project.Mayan]: "text-mayan",
+  [Project.RobertBrada]: 'text-robert',
+  [Project.StakeBar]: 'text-stakebar',
+  [Project.Observatory]: 'text-observatory',
+  [Project.SDP]: 'text-sdp',
+  [Project.CrocoFinance]: 'text-croco',
+  [Project.Satoshilabs]: 'text-trezor',
+  [Project.DuoCards]: 'text-duo',
+  [Project.Eigen]: 'text-eigen',
+  [Project.Wormhole]: 'text-wormhole',
+  [Project.Mayan]: 'text-mayan',
 };
 
 export function Content({ selectedProject }: ContentProps) {
@@ -34,7 +34,7 @@ export function Content({ selectedProject }: ContentProps) {
   const [galleryOpen, setGalleryOpen] = useState<boolean>(false);
 
   const handleKeyDown = (event: { key: string }) => {
-    if (event.key === "Escape") {
+    if (event.key === 'Escape') {
       setGalleryOpen(false);
     }
     // TODO close on Escape
@@ -48,18 +48,18 @@ export function Content({ selectedProject }: ContentProps) {
   };
 
   useEffect(() => {
-    document.addEventListener("keydown", handleKeyDown);
+    document.addEventListener('keydown', handleKeyDown);
 
     // Clean up the event listener when the component unmounts
     return () => {
-      document.removeEventListener("keydown", handleKeyDown);
+      document.removeEventListener('keydown', handleKeyDown);
     };
   }, []);
 
   return (
     <main className="pt-4 pb-20 px-4 text-left lg:py-10 lg:px-14">
       <div className={`mb-6 ${colorsByProject[selectedProject]}`}>
-        {selectedProject === "Robert Brada" ? (
+        {selectedProject === 'Robert Brada' ? (
           <PersonalPage />
         ) : (
           <div>
@@ -74,16 +74,16 @@ export function Content({ selectedProject }: ContentProps) {
       <div
         id="description"
         className={`text-text-secondary mb-6 flex flex-col gap-10 ${
-          selectedProject === "Robert Brada"
-            ? "xl:grid xl:grid-cols-6"
-            : "xl:grid xl:grid-cols-4"
+          selectedProject === 'Robert Brada'
+            ? 'xl:grid xl:grid-cols-6'
+            : 'xl:grid xl:grid-cols-4'
         }`}
       >
         <div
           className={
-            selectedProject === "Robert Brada"
-              ? "col-span-4 pr-8"
-              : "col-span-3"
+            selectedProject === 'Robert Brada'
+              ? 'col-span-4 pr-8'
+              : 'col-span-3'
           }
         >
           <div className="mb-6 text-justify">
@@ -99,12 +99,12 @@ export function Content({ selectedProject }: ContentProps) {
 
         <div
           className={`pt-4 h-min xl:pt-0 ${
-            selectedProject === "Robert Brada"
-              ? "col-span-2 xl:border-t-[0px] xl:border-l-[0px] xl:pl-0"
-              : "col-span-1 xl:border-t-[0px] xl:border-l-[1px] xl:pl-8"
+            selectedProject === 'Robert Brada'
+              ? 'col-span-2 xl:border-t-[0px] xl:border-l-[0px] xl:pl-0'
+              : 'col-span-1 xl:border-t-[0px] xl:border-l-[1px] xl:pl-8'
           }`}
         >
-          {selectedProject === "Robert Brada" ? (
+          {selectedProject === 'Robert Brada' ? (
             <ProfileSection />
           ) : references[selectedProject].length ? (
             <References references={references[selectedProject]} />
@@ -112,9 +112,12 @@ export function Content({ selectedProject }: ContentProps) {
         </div>
       </div>
 
-      {selectedProject === "Robert Brada" && (
+      {selectedProject === 'Robert Brada' && (
         <div>
-          <div className="mb-8 text-xs opacity-50" style={{fontFamily: "monospace"}}>
+          <div
+            className="mb-8 text-xs opacity-50"
+            style={{ fontFamily: 'monospace' }}
+          >
             Companies/Projects I've collaborated with
           </div>
           <LogosSection />
@@ -124,7 +127,7 @@ export function Content({ selectedProject }: ContentProps) {
       {galleryOpen && (
         <div
           className={`example-container ${
-            galleryOpen ? "cursor-zoom-out" : "cursor-zoom-in"
+            galleryOpen ? 'cursor-zoom-out' : 'cursor-zoom-in'
           }`}
           onClick={() => setGalleryOpen(false)}
         >
