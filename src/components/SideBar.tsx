@@ -18,7 +18,7 @@ export function SideBar({ onSelected, selected }: SideBarProps) {
           }}
         >
           <div className="flex space-x-2 items-center cursor-pointer hover:scale-[1.03] transition-all duration-100">
-            <img className="w-6 h-6" alt="Robert Brada" src={me} />
+            <img className="w-10 h-10" alt="Robert Brada" src={me} />
             <h1 className="font-bold text-[1.2rem] mt-[-0.1rem] text-black">
               Robert Brada
             </h1>
