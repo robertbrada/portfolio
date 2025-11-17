@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from '@tanstack/react-router';
 import { MenuIcon } from './icons/MenuIcon';
 import { CloseIcon } from './icons/CloseIcon';
 import { MenuItems } from './MenuItems';
@@ -8,23 +9,17 @@ import { Project } from '../types';
 interface MobileMenuProps {
   className?: string;
   selected: Project;
-  onSelected: (selected: Project) => void;
 }
-export const MobileMenu = ({ selected, onSelected }: MobileMenuProps) => {
+export const MobileMenu = ({ selected }: MobileMenuProps) => {
   const [opened, setOpened] = useState(false);
 
   return (
     <div>
       <div className="w-full flex justify-between px-3 py-2 border-b-[1px] h-[3rem] items-center lg:hidden">
-        <div
-          className="flex items-center gap-3 cursor-pointer"
-          onClick={() => {
-            onSelected(Project.RobertBrada);
-          }}
-        >
+        <Link to="/" className="flex items-center gap-3 cursor-pointer">
           <img className="w-6 h-6" alt="Robert Brada" src={me} />
           <span>Robert Brada</span>
-        </div>
+        </Link>
         <div>
           <button
             onClick={() => {
@@ -45,7 +40,10 @@ export const MobileMenu = ({ selected, onSelected }: MobileMenuProps) => {
           className={`bg-white h-full w-72 fixed right-0 overflow-y-auto transition-transform duration-300 ${
             opened ? 'translate-x-0' : 'translate-x-full'
           }`}
-          onClick={(e) => e.stopPropagation()}
+          onClick={(e) => {
+            e.stopPropagation();
+            setOpened(false);
+          }}
         >
           <div className="w-full flex justify-end px-3 py-2 border-b-[1px] h-[3rem] items-center">
             <button
@@ -57,13 +55,7 @@ export const MobileMenu = ({ selected, onSelected }: MobileMenuProps) => {
             </button>
           </div>
           <div className="px-4 py-4">
-            <MenuItems
-              selected={selected}
-              onSelected={(project) => {
-                onSelected(project);
-                setOpened(false);
-              }}
-            />
+            <MenuItems selected={selected} />
           </div>
         </div>
       </div>

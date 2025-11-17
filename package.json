@@ -20,6 +20,8 @@
     "@fontsource-variable/rubik": "^5.1.0",
     "@fontsource/poppins": "^5.0.15",
     "@fontsource/source-serif-pro": "^5.1.0",
+    "@tanstack/react-router": "^1.136.8",
+    "@tanstack/router-devtools": "^1.136.8",
     "clsx": "^2.1.1",
     "framer-motion": "^12.23.24",
     "popmotion": "^11.0.5",
