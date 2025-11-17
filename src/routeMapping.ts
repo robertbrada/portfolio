@@ -17,10 +17,13 @@ export const projectToSlug: Record<Project, string> = {
 // Reverse mapping: slug to Project enum
 export const slugToProject: Record<string, Project> = Object.entries(
   projectToSlug
-).reduce((acc, [project, slug]) => {
-  acc[slug] = project as Project;
-  return acc;
-}, {} as Record<string, Project>);
+).reduce(
+  (acc, [project, slug]) => {
+    acc[slug] = project as Project;
+    return acc;
+  },
+  {} as Record<string, Project>
+);
 
 // Helper to get slug from project
 export function getProjectSlug(project: Project): string {

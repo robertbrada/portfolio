@@ -69,10 +69,7 @@ function ProjectItem({ selected, name }: ProjectItemProps) {
 
   return (
     <li>
-      <Link
-        to={to}
-        className={getActiveClassName(selected, name)}
-      >
+      <Link to={to} className={getActiveClassName(selected, name)}>
         {name}
       </Link>
     </li>
@@ -117,10 +114,7 @@ export const MenuItems = ({ selected }: MenuItemsProps) => {
       </ul>
       <div className={dateClasses}>2022</div>
       <ul>
-        <ProjectItem
-          name={Project.SDP}
-          selected={selected === Project.SDP}
-        />
+        <ProjectItem name={Project.SDP} selected={selected === Project.SDP} />
         <ProjectItem
           name={Project.Observatory}
           selected={selected === Project.Observatory}

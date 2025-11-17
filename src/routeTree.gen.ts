@@ -10,81 +10,83 @@
 
 // Import Routes
 
-import { Route as rootRoute } from './routes/__root'
-import { Route as IndexImport } from './routes/index'
-import { Route as ProjectsSlugImport } from './routes/projects.$slug'
+import { Route as rootRoute } from './routes/__root';
+import { Route as IndexImport } from './routes/index';
+import { Route as ProjectsSlugImport } from './routes/projects.$slug';
 
 // Create/Update Routes
 
 const IndexRoute = IndexImport.update({
   path: '/',
   getParentRoute: () => rootRoute,
-} as any)
+} as any);
 
 const ProjectsSlugRoute = ProjectsSlugImport.update({
   path: '/projects/$slug',
   getParentRoute: () => rootRoute,
-} as any)
+} as any);
 
 // Populate the FileRoutesByPath interface
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
     '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexImport
-      parentRoute: typeof rootRoute
-    }
+      id: '/';
+      path: '/';
+      fullPath: '/';
+      preLoaderRoute: typeof IndexImport;
+      parentRoute: typeof rootRoute;
+    };
     '/projects/$slug': {
-      id: '/projects/$slug'
-      path: '/projects/$slug'
-      fullPath: '/projects/$slug'
-      preLoaderRoute: typeof ProjectsSlugImport
-      parentRoute: typeof rootRoute
-    }
+      id: '/projects/$slug';
+      path: '/projects/$slug';
+      fullPath: '/projects/$slug';
+      preLoaderRoute: typeof ProjectsSlugImport;
+      parentRoute: typeof rootRoute;
+    };
   }
 }
 
 // Create and export the route tree
 
 export interface FileRoutesByFullPath {
-  '/': typeof IndexRoute
-  '/projects/$slug': typeof ProjectsSlugRoute
+  '/': typeof IndexRoute;
+  '/projects/$slug': typeof ProjectsSlugRoute;
 }
 
 export interface FileRoutesByTo {
-  '/': typeof IndexRoute
-  '/projects/$slug': typeof ProjectsSlugRoute
+  '/': typeof IndexRoute;
+  '/projects/$slug': typeof ProjectsSlugRoute;
 }
 
 export interface FileRoutesById {
-  __root__: typeof rootRoute
-  '/': typeof IndexRoute
-  '/projects/$slug': typeof ProjectsSlugRoute
+  __root__: typeof rootRoute;
+  '/': typeof IndexRoute;
+  '/projects/$slug': typeof ProjectsSlugRoute;
 }
 
 export interface FileRouteTypes {
-  fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/projects/$slug'
-  fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/projects/$slug'
-  id: '__root__' | '/' | '/projects/$slug'
-  fileRoutesById: FileRoutesById
+  fileRoutesByFullPath: FileRoutesByFullPath;
+  fullPaths: '/' | '/projects/$slug';
+  fileRoutesByTo: FileRoutesByTo;
+  to: '/' | '/projects/$slug';
+  id: '__root__' | '/' | '/projects/$slug';
+  fileRoutesById: FileRoutesById;
 }
 
 export interface RootRouteChildren {
-  IndexRoute: typeof IndexRoute
-  ProjectsSlugRoute: typeof ProjectsSlugRoute
+  IndexRoute: typeof IndexRoute;
+  ProjectsSlugRoute: typeof ProjectsSlugRoute;
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ProjectsSlugRoute: ProjectsSlugRoute,
-}
+};
 
-export const routeTree = rootRoute._addFileChildren(rootRouteChildren)._addFileTypes<FileRouteTypes>()
+export const routeTree = rootRoute
+  ._addFileChildren(rootRouteChildren)
+  ._addFileTypes<FileRouteTypes>();
 
 /* prettier-ignore-end */
 
