@@ -83,7 +83,6 @@ interface MenuItemsProps {
 export const MenuItems = ({ selected, onSelected }: MenuItemsProps) => {
   return (
     <section className="pt-2">
-      <div className="ml-2 lg:hidden">My projects</div>
       <div className={dateClasses}>2025</div>
       <ul>
         <ProjectItem
