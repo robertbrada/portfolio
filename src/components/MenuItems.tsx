@@ -1,9 +1,10 @@
+import { Link } from '@tanstack/react-router';
 import { Project } from '../types';
+import { getProjectSlug } from '../routeMapping';
 
 interface ProjectItemProps {
   selected: boolean;
   name: Project;
-  onClick: (name: Project) => void;
 }
 
 const dateClasses = 'font-bold text-xs px-2 mt-8 mb-2 text-[#151515]';
@@ -62,37 +63,34 @@ function getActiveClassName(selected: boolean, project: Project) {
     : classesByProject[project].default;
 }
 
-function ProjectItem({ selected, name, onClick }: ProjectItemProps) {
+function ProjectItem({ selected, name }: ProjectItemProps) {
+  const slug = getProjectSlug(name);
+  const to = name === Project.RobertBrada ? '/' : `/projects/${slug}`;
+
   return (
     <li>
-      <button
-        onClick={() => onClick(name)}
-        className={getActiveClassName(selected, name)}
-      >
+      <Link to={to} className={getActiveClassName(selected, name)}>
         {name}
-      </button>
+      </Link>
     </li>
   );
 }
 
 interface MenuItemsProps {
   selected: Project;
-  onSelected: (name: Project) => void;
 }
 
-export const MenuItems = ({ selected, onSelected }: MenuItemsProps) => {
+export const MenuItems = ({ selected }: MenuItemsProps) => {
   return (
     <section className="pt-2">
       <div className={dateClasses}>2025</div>
       <ul>
         <ProjectItem
           name={Project.Mayan}
-          onClick={onSelected}
           selected={selected === Project.Mayan}
         />
         <ProjectItem
           name={Project.Wormhole}
-          onClick={onSelected}
           selected={selected === Project.Wormhole}
         />
       </ul>
@@ -100,12 +98,10 @@ export const MenuItems = ({ selected, onSelected }: MenuItemsProps) => {
       <ul>
         <ProjectItem
           name={Project.Eigen}
-          onClick={onSelected}
           selected={selected === Project.Eigen}
         />
         <ProjectItem
           name={Project.DuoCards}
-          onClick={onSelected}
           selected={selected === Project.DuoCards}
         />
       </ul>
@@ -113,20 +109,14 @@ export const MenuItems = ({ selected, onSelected }: MenuItemsProps) => {
       <ul>
         <ProjectItem
           name={Project.StakeBar}
-          onClick={onSelected}
           selected={selected === Project.StakeBar}
         />
       </ul>
       <div className={dateClasses}>2022</div>
       <ul>
-        <ProjectItem
-          name={Project.SDP}
-          onClick={onSelected}
-          selected={selected === Project.SDP}
-        />
+        <ProjectItem name={Project.SDP} selected={selected === Project.SDP} />
         <ProjectItem
           name={Project.Observatory}
-          onClick={onSelected}
           selected={selected === Project.Observatory}
         />
       </ul>
@@ -134,7 +124,6 @@ export const MenuItems = ({ selected, onSelected }: MenuItemsProps) => {
       <ul>
         <ProjectItem
           name={Project.CrocoFinance}
-          onClick={onSelected}
           selected={selected === Project.CrocoFinance}
         />
       </ul>
@@ -142,7 +131,6 @@ export const MenuItems = ({ selected, onSelected }: MenuItemsProps) => {
       <ul>
         <ProjectItem
           name={Project.Satoshilabs}
-          onClick={onSelected}
           selected={selected === Project.Satoshilabs}
         />
       </ul>
