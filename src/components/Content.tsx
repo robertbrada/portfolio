@@ -113,7 +113,7 @@ export function Content({ selectedProject }: ContentProps) {
       </div>
 
       {selectedProject === 'Robert Brada' && (
-        <div>
+        <div className="px-4 xl:px-0">
           <div
             className="mb-8 text-xs opacity-50"
             style={{ fontFamily: 'monospace' }}
