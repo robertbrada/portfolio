@@ -91,6 +91,7 @@ export function Content({ selectedProject }: ContentProps) {
           </div>
           {images[selectedProject].length > 0 && (
             <FeaturedImage
+              key={selectedProject}
               onClick={(src) => handleOnClick(src)}
               images={images[selectedProject]}
             />
