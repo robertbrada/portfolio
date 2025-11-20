@@ -4,7 +4,7 @@ export function ProfileSection() {
   return (
     <div>
       <img
-        className="mx-auto w-full h-auto max-w-[400px]"
+        className="mx-auto w-full h-auto max-w-[300px]"
         alt="Robert Brada"
         src={me}
       />
