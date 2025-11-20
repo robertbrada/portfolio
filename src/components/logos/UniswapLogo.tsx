@@ -1,5 +1,5 @@
 export function UniswapLogo({ className }: { className?: string }) {
-  const fillColor = "#F50DB4";
+  const fillColor = '#F50DB4';
   return (
     <svg
       viewBox="0 0 3534 887"
