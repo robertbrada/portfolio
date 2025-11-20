@@ -4,6 +4,7 @@ import { SatoshilabsLogo } from './logos/SatoshilabsLogo';
 import { ObservatoryLogo } from './logos/ObservatoryLogo';
 import { MayanLogo } from './logos/MayanLogo';
 import { AztecLogo } from './logos/AztecLogo';
+import { UniswapLogo } from './logos/UniswapLogo';
 
 const aLogoClass =
   'hover:scale-[1.1] duration-100 transition-all grayscale opacity-40 hover:grayscale-0 hover:opacity-100';
@@ -36,6 +37,9 @@ export function LogosSection() {
       </a>
       <a href="https://mayan.finance/" target="_blank" className={aLogoClass}>
         <MayanLogo className="w-36" />
+      </a>
+      <a href="https://uniswap.org/" target="_blank" className={aLogoClass}>
+        <UniswapLogo className="w-44" />
       </a>
     </div>
   );
