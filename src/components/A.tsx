@@ -23,7 +23,7 @@ export const A = ({ project, href, children }: LinkProps) => {
     <a
       href={href}
       target="_blank"
-      className={`${colorClasses[project]} font-bold hover:underline `}
+      className={`${colorClasses[project]} font-bold hover:underline inline-block transition-transform duration-200 hover:-translate-y-px`}
     >
       {children}
     </a>
