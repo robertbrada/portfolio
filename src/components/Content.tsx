@@ -75,14 +75,14 @@ export function Content({ selectedProject }: ContentProps) {
         id="description"
         className={`text-text-secondary mb-6 flex flex-col gap-10 ${
           selectedProject === 'Robert Brada'
-            ? 'xl:grid xl:grid-cols-6'
+            ? 'xl:grid xl:grid-cols-6 lg:pr-16'
             : 'xl:grid xl:grid-cols-4'
         }`}
       >
         <div
           className={
             selectedProject === 'Robert Brada'
-              ? 'col-span-4 pr-8'
+              ? 'col-span-4 xl:pr-8'
               : 'col-span-3'
           }
         >
