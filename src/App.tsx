@@ -1,8 +1,7 @@
 import './App.css';
 import { Content } from './components/Content';
-import { SideBar } from './components/SideBar';
+import { SideBar, MobileMenu } from './components/Navigation';
 import { Project } from './types';
-import { MobileMenu } from './components/MobileMenu';
 
 interface AppProps {
   selectedProject: Project;

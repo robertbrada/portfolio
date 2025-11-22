@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useState, useRef } from 'react';
 import { motion, useDomEvent } from 'framer-motion';
-import trezor from '../assets/images/trezor/trade.png';
+import trezor from '../../assets/images/trezor/trade.png';
 
 const transition = {
   type: 'spring' as const,

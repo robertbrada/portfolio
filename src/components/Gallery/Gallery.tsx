@@ -4,8 +4,8 @@ import { wrap } from 'popmotion';
 import * as React from 'react';
 import { useState } from 'react';
 import classes from './Gallery.module.css';
-import { ProjectImage } from '../images';
-import { InfoIcon } from './icons/InfoIcon';
+import { ProjectImage } from '../../images';
+import { InfoIcon } from '../icons/InfoIcon';
 
 const variants = {
   enter: (direction: number) => {

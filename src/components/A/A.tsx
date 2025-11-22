@@ -1,4 +1,4 @@
-import { Project } from '../types';
+import { Project } from '../../types';
 
 const colorClasses: Record<Project, string> = {
   [Project.Satoshilabs]: 'text-[#03854D]',
@@ -12,13 +12,13 @@ const colorClasses: Record<Project, string> = {
   [Project.Wormhole]: 'text-[#000000]',
   [Project.Mayan]: 'text-[#3885FF]',
 };
-interface LinkProps {
+interface AProps {
   project: Project;
   href: string;
   children: React.ReactNode;
 }
 
-export const A = ({ project, href, children }: LinkProps) => {
+export const A = ({ project, href, children }: AProps) => {
   return (
     <a
       href={href}

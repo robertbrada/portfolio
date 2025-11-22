@@ -1,9 +1,9 @@
-import { GithubLogo } from './logos/GithubLogo';
-import { LoomLogo } from './logos/LoomLogo';
-import { MediumLogo } from './logos/MediumLogo';
-import { WebsiteIcon } from './icons/WebsiteIcon';
-import { XLogo } from './logos/XLogo';
-import { YouTubeLogo } from './logos/YouTubeLogo';
+import { GithubLogo } from '../logos/GithubLogo';
+import { LoomLogo } from '../logos/LoomLogo';
+import { MediumLogo } from '../logos/MediumLogo';
+import { WebsiteIcon } from '../icons/WebsiteIcon';
+import { XLogo } from '../logos/XLogo';
+import { YouTubeLogo } from '../logos/YouTubeLogo';
 
 type ReferenceType = 'github' | 'web' | 'loom' | 'youtube' | 'medium' | 'x';
 
