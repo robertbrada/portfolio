@@ -21,43 +21,43 @@
 
 /* Project-specific background colors with 10% opacity */
 .menuItem--stakebar:hover::before {
-  background-color: rgba(107, 67, 238, 0.1);
+  background-color: rgb(from theme('colors.stakebar-1') r g b / 0.1);
 }
 
 .menuItem--observatory:hover::before {
-  background-color: rgba(47, 179, 163, 0.1);
+  background-color: rgb(from theme('colors.observatory-1') r g b / 0.1);
 }
 
 .menuItem--sdp:hover::before {
-  background-color: rgba(58, 97, 249, 0.1);
+  background-color: rgb(from theme('colors.sdp-1') r g b / 0.1);
 }
 
 .menuItem--croco:hover::before {
-  background-color: rgba(52, 161, 60, 0.1);
+  background-color: rgb(from theme('colors.croco-1') r g b / 0.1);
 }
 
 .menuItem--trezor:hover::before {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgb(from theme('colors.trezor-1') r g b / 0.1);
 }
 
 .menuItem--duo:hover::before {
-  background-color: rgba(35, 140, 229, 0.1);
+  background-color: rgb(from theme('colors.duo-1') r g b / 0.1);
 }
 
 .menuItem--eigen:hover::before {
-  background-color: rgba(21, 9, 88, 0.1);
+  background-color: rgb(from theme('colors.eigen-1') r g b / 0.1);
 }
 
 .menuItem--robert:hover::before {
-  background-color: rgba(45, 55, 72, 0.1);
+  background-color: rgb(from theme('colors.about-1') r g b / 0.1);
 }
 
 .menuItem--wormhole:hover::before {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgb(from theme('colors.wormhole-1') r g b / 0.1);
 }
 
 .menuItem--mayan:hover::before {
-  background-color: rgba(73, 169, 241, 0.1);
+  background-color: rgb(from theme('colors.mayan-1') r g b / 0.1);
 }
 
 .menuItemContent {
