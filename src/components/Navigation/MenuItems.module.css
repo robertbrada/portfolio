@@ -2,6 +2,15 @@
   display: block;
   position: relative;
   overflow: hidden;
+  transition: transform 0.2s ease-out;
+}
+
+.menuItem:hover {
+  transform: translateX(0.25rem);
+}
+
+.menuItem--selected {
+  transform: translateX(0.25rem);
 }
 
 .menuItem::before {
@@ -11,7 +20,7 @@
   left: 0;
   width: 0;
   height: 100%;
-  transition: width 0.3s ease-out;
+  transition: width 0.25s ease-out;
   z-index: -1;
 }
 
@@ -60,15 +69,3 @@
   background-color: rgb(from theme('colors.mayan-1') r g b / 0.1);
 }
 
-.menuItemContent {
-  display: block;
-  transition: transform 0.2s ease-out;
-}
-
-.menuItem:hover .menuItemContent {
-  transform: translateX(0.25rem);
-}
-
-.menuItemContent--selected {
-  transform: translateX(0.25rem);
-}
