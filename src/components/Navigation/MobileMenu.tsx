@@ -46,7 +46,9 @@ export const MobileMenu = ({ selected }: MobileMenuProps) => {
           }}
         >
           <div className="w-full flex justify-between px-3 py-2 border-b-[1px] h-[3rem] items-center">
-            <span className="font-medium text-sm text-text-2 pl-2">Projects Timeline</span>
+            <span className="font-medium text-sm text-text-2 pl-2">
+              Projects Timeline
+            </span>
             <button
               onClick={() => setOpened(false)}
               className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
