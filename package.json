@@ -10,7 +10,7 @@
     "dev": "vite",
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css}\"",
     "lint": "eslint .",
-    "predeploy": "npm run build",
+    "predeploy": "pnpm run build",
     "preview": "vite preview",
     "serve": "vite preview"
   },
