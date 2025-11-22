@@ -2,7 +2,7 @@ import { Reference } from './components/References';
 import { Project } from './types';
 
 const references: Record<Project, Reference[]> = {
-  [Project.Satoshilabs]: [
+  [Project.Trezor]: [
     {
       type: 'web',
       link: 'https://trezor.io/trezor-suite',

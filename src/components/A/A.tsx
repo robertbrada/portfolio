@@ -1,16 +1,16 @@
 import { Project } from '../../types';
 
 const colorClasses: Record<Project, string> = {
-  [Project.Satoshilabs]: 'text-[#03854D]',
-  [Project.CrocoFinance]: 'text-[#8fbe20]',
-  [Project.DuoCards]: 'text-[#4ebbf2]',
-  [Project.Eigen]: 'text-[#4a63e8]',
-  [Project.Observatory]: 'text-[#5bc0b4]',
-  [Project.SDP]: 'text-[#3aa3f9]',
-  [Project.StakeBar]: 'text-[#ce5fff]',
-  [Project.RobertBrada]: 'text-[#4479ec]',
-  [Project.Wormhole]: 'text-[#000000]',
-  [Project.Mayan]: 'text-[#3885FF]',
+  [Project.Trezor]: 'text-trezor-2',
+  [Project.CrocoFinance]: 'text-croco-2',
+  [Project.DuoCards]: 'text-duo-2',
+  [Project.Eigen]: 'text-eigen-2',
+  [Project.Observatory]: 'text-observatory-2',
+  [Project.SDP]: 'text-sdp-2',
+  [Project.StakeBar]: 'text-stakebar-2',
+  [Project.RobertBrada]: 'text-about-2',
+  [Project.Wormhole]: 'text-wormhole-1',
+  [Project.Mayan]: 'text-mayan-2',
 };
 interface AProps {
   project: Project;

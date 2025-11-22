@@ -21,7 +21,7 @@ import stakeInput from './assets/images/stakebar/input.png';
 import stakeLandingBlue from './assets/images/stakebar/landing-blue.png';
 import stake1 from './assets/images/stakebar/ui-1.png';
 import trezorChart from './assets/images/trezor/chart.png';
-import trexorEthTx from './assets/images/trezor/eth-transaction.png';
+import trezorEthTx from './assets/images/trezor/eth-transaction.png';
 import trezorWallet from './assets/images/trezor/wallet.png';
 import mayanApp from './assets/images/mayan/mayan-app.png';
 import wormholeApp from './assets/images/wormhole/wormhole-app.png';
@@ -34,8 +34,8 @@ export interface ProjectImage {
 }
 
 const images: Record<Project, ProjectImage[]> = {
-  [Project.Satoshilabs]: [
-    { src: trexorEthTx, border: true },
+  [Project.Trezor]: [
+    { src: trezorEthTx, border: true },
     { src: trezorChart, border: false },
     { src: trezorWallet, border: false },
   ],

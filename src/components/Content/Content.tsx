@@ -14,16 +14,16 @@ interface ContentProps {
 }
 
 const colorsByProject: Record<Project, string> = {
-  [Project.RobertBrada]: 'text-robert',
-  [Project.StakeBar]: 'text-stakebar',
-  [Project.Observatory]: 'text-observatory',
-  [Project.SDP]: 'text-sdp',
-  [Project.CrocoFinance]: 'text-croco',
-  [Project.Satoshilabs]: 'text-trezor',
-  [Project.DuoCards]: 'text-duo',
-  [Project.Eigen]: 'text-eigen',
-  [Project.Wormhole]: 'text-wormhole',
-  [Project.Mayan]: 'text-mayan',
+  [Project.RobertBrada]: 'text-about-1',
+  [Project.StakeBar]: 'text-stakebar-1',
+  [Project.Observatory]: 'text-observatory-1',
+  [Project.SDP]: 'text-sdp-1',
+  [Project.CrocoFinance]: 'text-croco-1',
+  [Project.Trezor]: 'text-trezor-1',
+  [Project.DuoCards]: 'text-duo-1',
+  [Project.Eigen]: 'text-eigen-1',
+  [Project.Wormhole]: 'text-wormhole-1',
+  [Project.Mayan]: 'text-mayan-1',
 };
 
 export function Content({ selectedProject }: ContentProps) {
@@ -84,9 +84,7 @@ export function Content({ selectedProject }: ContentProps) {
               : 'col-span-3'
           }
         >
-          <div className="mb-6 text-justify">
-            {descriptions[selectedProject]}
-          </div>
+          <div className="mb-6">{descriptions[selectedProject]}</div>
           {images[selectedProject].length > 0 && (
             <FeaturedImage
               key={selectedProject}
