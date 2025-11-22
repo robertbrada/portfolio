@@ -8,10 +8,11 @@ interface ProjectItemProps {
   name: Project;
 }
 
-const dateClasses = 'font-bold text-xs px-2 mt-8 mb-2 text-[#151515]';
+const dateClasses = 'font-bold text-xs px-2 mb-2 text-[#151515] lg:mt-8';
+const dateClassesWithMargin = 'font-bold text-xs px-2 mt-8 mb-2 text-[#151515]';
 
 const sharedClasses =
-  'my-1 py-0.5 pl-2 pr-2 w-fit rounded-xs text-left text-sm transition-all hover:font-medium duration-200 font-normal';
+  'my-1 py-0.5 pl-2 pr-2 rounded-xs text-left text-sm transition-all hover:font-medium duration-200 font-normal lg:my-1 lg:py-0.5 lg:pl-2 lg:pr-2 lg:text-sm lg:w-fit my-2 py-3 pl-4 pr-4 text-base';
 const sharedSelectedClasses = `${sharedClasses} font-medium text-white`;
 
 const classesByProject: Record<Project, { default: string; selected: string }> =
@@ -95,7 +96,7 @@ export const MenuItems = ({ selected }: MenuItemsProps) => {
           selected={selected === Project.Wormhole}
         />
       </ul>
-      <div className={dateClasses}>2024</div>
+      <div className={dateClassesWithMargin}>2024</div>
       <ul>
         <ProjectItem
           name={Project.Eigen}
@@ -106,14 +107,14 @@ export const MenuItems = ({ selected }: MenuItemsProps) => {
           selected={selected === Project.DuoCards}
         />
       </ul>
-      <div className={dateClasses}>2023</div>
+      <div className={dateClassesWithMargin}>2023</div>
       <ul>
         <ProjectItem
           name={Project.StakeBar}
           selected={selected === Project.StakeBar}
         />
       </ul>
-      <div className={dateClasses}>2022</div>
+      <div className={dateClassesWithMargin}>2022</div>
       <ul>
         <ProjectItem name={Project.SDP} selected={selected === Project.SDP} />
         <ProjectItem
@@ -121,14 +122,14 @@ export const MenuItems = ({ selected }: MenuItemsProps) => {
           selected={selected === Project.Observatory}
         />
       </ul>
-      <div className={dateClasses}>2021</div>
+      <div className={dateClassesWithMargin}>2021</div>
       <ul>
         <ProjectItem
           name={Project.CrocoFinance}
           selected={selected === Project.CrocoFinance}
         />
       </ul>
-      <div className={dateClasses}>2020</div>
+      <div className={dateClassesWithMargin}>2020</div>
       <ul>
         <ProjectItem
           name={Project.Trezor}
