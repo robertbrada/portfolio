@@ -16,14 +16,15 @@ interface AProps {
   project: Project;
   href: string;
   children: React.ReactNode;
+  className?: string;
 }
 
-export const A = ({ project, href, children }: AProps) => {
+export const A = ({ project, href, children, className }: AProps) => {
   return (
     <a
       href={href}
       target="_blank"
-      className={`${colorClasses[project]} font-bold hover:underline inline-block transition-transform duration-200 hover:-translate-y-px`}
+      className={`${colorClasses[project]} font-bold hover:underline inline-block transition-transform duration-200 hover:-translate-y-px ${className || ''}`}
     >
       {children}
     </a>

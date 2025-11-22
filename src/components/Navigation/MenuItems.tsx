@@ -1,6 +1,7 @@
 import { Link } from '@tanstack/react-router';
 import { Project } from '../../types';
 import { getProjectSlug } from '../../routeMapping';
+import styles from './MenuItems.module.css';
 
 interface ProjectItemProps {
   selected: boolean;
@@ -10,50 +11,50 @@ interface ProjectItemProps {
 const dateClasses = 'font-bold text-xs px-2 mt-8 mb-2 text-[#151515]';
 
 const sharedClasses =
-  'my-0.5 py-0.5 px-2 w-fit rounded-sm text-left text-sm hover:scale-[1.08] transition-all hover:font-medium duration-100 hover:translate-y-[-1px] text-text-secondary font-normal';
+  'my-1 py-0.5 pl-2 pr-[0.95rem] w-fit rounded-xs text-left text-sm transition-all hover:font-medium duration-200 text-text-secondary font-normal';
 const sharedSelectedClasses = `${sharedClasses} scale-[1.08] font-medium text-white`;
 
 const classesByProject: Record<Project, { default: string; selected: string }> =
   {
     [Project.StakeBar]: {
-      default: `${sharedClasses} hover:text-stakebar hover:bg-stakebar/10`,
-      selected: `${sharedSelectedClasses} bg-stakebar`,
+      default: `${styles.menuItem} ${styles['menuItem--stakebar']} ${sharedClasses} hover:text-stakebar`,
+      selected: `${styles.menuItem} ${sharedSelectedClasses} bg-stakebar`,
     },
     [Project.Observatory]: {
-      default: `${sharedClasses} hover:text-observatory hover:bg-observatory/10`,
-      selected: `${sharedSelectedClasses} bg-observatory`,
+      default: `${styles.menuItem} ${styles['menuItem--observatory']} ${sharedClasses} hover:text-observatory`,
+      selected: `${styles.menuItem} ${sharedSelectedClasses} bg-observatory`,
     },
     [Project.SDP]: {
-      default: `${sharedClasses} hover:text-sdp hover:bg-sdp/10`,
-      selected: `${sharedSelectedClasses} bg-sdp`,
+      default: `${styles.menuItem} ${styles['menuItem--sdp']} ${sharedClasses} hover:text-sdp`,
+      selected: `${styles.menuItem} ${sharedSelectedClasses} bg-sdp`,
     },
     [Project.CrocoFinance]: {
-      default: `${sharedClasses} hover:text-croco hover:bg-croco/10`,
-      selected: `${sharedSelectedClasses} bg-croco`,
+      default: `${styles.menuItem} ${styles['menuItem--croco']} ${sharedClasses} hover:text-croco`,
+      selected: `${styles.menuItem} ${sharedSelectedClasses} bg-croco`,
     },
     [Project.Satoshilabs]: {
-      default: `${sharedClasses} hover:text-trezor hover:bg-trezor/10`,
-      selected: `${sharedSelectedClasses} bg-trezor`,
+      default: `${styles.menuItem} ${styles['menuItem--trezor']} ${sharedClasses} hover:text-trezor`,
+      selected: `${styles.menuItem} ${sharedSelectedClasses} bg-trezor`,
     },
     [Project.DuoCards]: {
-      default: `${sharedClasses} hover:text-duo hover:bg-duo/10`,
-      selected: `${sharedSelectedClasses} bg-duo`,
+      default: `${styles.menuItem} ${styles['menuItem--duo']} ${sharedClasses} hover:text-duo`,
+      selected: `${styles.menuItem} ${sharedSelectedClasses} bg-duo`,
     },
     [Project.Eigen]: {
-      default: `${sharedClasses} hover:text-eigen hover:bg-eigen/10`,
-      selected: `${sharedSelectedClasses} bg-eigen`,
+      default: `${styles.menuItem} ${styles['menuItem--eigen']} ${sharedClasses} hover:text-eigen`,
+      selected: `${styles.menuItem} ${sharedSelectedClasses} bg-eigen`,
     },
     [Project.RobertBrada]: {
-      default: `${sharedClasses} hover:text-robert hover:bg-robert/10`,
-      selected: `${sharedSelectedClasses} bg-robert`,
+      default: `${styles.menuItem} ${styles['menuItem--robert']} ${sharedClasses} hover:text-robert`,
+      selected: `${styles.menuItem} ${sharedSelectedClasses} bg-robert`,
     },
     [Project.Wormhole]: {
-      default: `${sharedClasses} hover:text-wormhole hover:bg-wormhole/10`,
-      selected: `${sharedSelectedClasses} bg-wormhole`,
+      default: `${styles.menuItem} ${styles['menuItem--wormhole']} ${sharedClasses} hover:text-wormhole`,
+      selected: `${styles.menuItem} ${sharedSelectedClasses} bg-wormhole`,
     },
     [Project.Mayan]: {
-      default: `${sharedClasses} hover:text-mayan hover:bg-mayan/10`,
-      selected: `${sharedSelectedClasses} bg-mayan`,
+      default: `${styles.menuItem} ${styles['menuItem--mayan']} ${sharedClasses} hover:text-mayan`,
+      selected: `${styles.menuItem} ${sharedSelectedClasses} bg-mayan`,
     },
   };
 
@@ -67,10 +68,14 @@ function ProjectItem({ selected, name }: ProjectItemProps) {
   const slug = getProjectSlug(name);
   const to = name === Project.RobertBrada ? '/' : `/projects/${slug}`;
 
+  const contentClassName = selected
+    ? `${styles.menuItemContent} ${styles['menuItemContent--selected']}`
+    : styles.menuItemContent;
+
   return (
     <li>
       <Link to={to} className={getActiveClassName(selected, name)}>
-        {name}
+        <span className={contentClassName}>{name}</span>
       </Link>
     </li>
   );
