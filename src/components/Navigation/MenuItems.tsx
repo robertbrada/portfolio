@@ -11,7 +11,7 @@ interface ProjectItemProps {
 const dateClasses = 'font-bold text-xs px-2 mt-8 mb-2 text-[#151515]';
 
 const sharedClasses =
-  'my-1 py-0.5 px-2 w-fit rounded-sm text-left text-sm transition-all hover:font-medium duration-200 text-text-secondary font-normal';
+  'my-1 py-0.5 pl-2 pr-[0.95rem] w-fit rounded-xs text-left text-sm transition-all hover:font-medium duration-200 text-text-secondary font-normal';
 const sharedSelectedClasses = `${sharedClasses} scale-[1.08] font-medium text-white`;
 
 const classesByProject: Record<Project, { default: string; selected: string }> =
