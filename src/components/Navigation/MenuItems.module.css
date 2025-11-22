@@ -68,4 +68,3 @@
 .menuItem--mayan:hover::before {
   background-color: rgb(from theme('colors.mayan-1') r g b / 0.1);
 }
-
