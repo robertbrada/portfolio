@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "build": "tsc -b && vite build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "git checkout master && git pull origin master && pnpm run build && gh-pages -d dist",
     "dev": "vite",
     "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css}\"",
     "lint": "eslint .",
