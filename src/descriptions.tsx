@@ -9,19 +9,19 @@ const aIconClass =
 const iconHoverClasses = 'px-1 py-1';
 
 const descriptions: Record<Project, React.ReactNode> = {
-  [Project.Satoshilabs]: (
+  [Project.Trezor]: (
     <div>
       <p>
         I joined{' '}
-        <A project={Project.Satoshilabs} href="https://satoshilabs.com/">
+        <A project={Project.Trezor} href="https://satoshilabs.com/">
           SatoshiLabs
         </A>{' '}
         in 2020 as a frontend developer. With the team we were building{' '}
-        <A project={Project.Satoshilabs} href="https://trezor.io/trezor-suite">
+        <A project={Project.Trezor} href="https://trezor.io/trezor-suite">
           Trezor Suite
         </A>{' '}
         which is a web app that people use to interact with the{' '}
-        <A project={Project.Satoshilabs} href="https://trezor.io/">
+        <A project={Project.Trezor} href="https://trezor.io/">
           Trezor
         </A>{' '}
         hardware wallet. My main job was to help with Ethereum integration and
@@ -30,7 +30,7 @@ const descriptions: Record<Project, React.ReactNode> = {
       </p>
       <p className="mt-2">
         Below you can see some screens from the{' '}
-        <A project={Project.Satoshilabs} href="https://trezor.io/trezor-suite">
+        <A project={Project.Trezor} href="https://trezor.io/trezor-suite">
           Trezor Suite
         </A>{' '}
         app that I have worked on in particular.

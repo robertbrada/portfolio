@@ -19,7 +19,7 @@ const colorsByProject: Record<Project, string> = {
   [Project.Observatory]: 'text-observatory-1',
   [Project.SDP]: 'text-sdp-1',
   [Project.CrocoFinance]: 'text-croco-1',
-  [Project.Satoshilabs]: 'text-trezor-1',
+  [Project.Trezor]: 'text-trezor-1',
   [Project.DuoCards]: 'text-duo-1',
   [Project.Eigen]: 'text-eigen-1',
   [Project.Wormhole]: 'text-wormhole-1',

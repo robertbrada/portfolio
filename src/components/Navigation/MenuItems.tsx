@@ -32,7 +32,7 @@ const classesByProject: Record<Project, { default: string; selected: string }> =
       default: `${styles.menuItem} ${styles['menuItem--croco']} ${sharedClasses} text-[#606d81] hover:text-croco-1`,
       selected: `${styles.menuItem} ${styles['menuItem--selected']} ${sharedSelectedClasses} bg-croco-1`,
     },
-    [Project.Satoshilabs]: {
+    [Project.Trezor]: {
       default: `${styles.menuItem} ${styles['menuItem--trezor']} ${sharedClasses} text-[#606d81] hover:text-trezor-1`,
       selected: `${styles.menuItem} ${styles['menuItem--selected']} ${sharedSelectedClasses} bg-trezor-1`,
     },
@@ -131,8 +131,8 @@ export const MenuItems = ({ selected }: MenuItemsProps) => {
       <div className={dateClasses}>2020</div>
       <ul>
         <ProjectItem
-          name={Project.Satoshilabs}
-          selected={selected === Project.Satoshilabs}
+          name={Project.Trezor}
+          selected={selected === Project.Trezor}
         />
       </ul>
     </section>
