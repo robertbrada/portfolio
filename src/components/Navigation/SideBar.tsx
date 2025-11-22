@@ -1,5 +1,5 @@
 import { Link } from '@tanstack/react-router';
-import { Project } from '../types';
+import { Project } from '../../types';
 import { MenuItems } from './MenuItems';
 import me from '/favicon-punk.svg';
 

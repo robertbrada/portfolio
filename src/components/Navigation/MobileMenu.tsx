@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { Link } from '@tanstack/react-router';
-import { MenuIcon } from './icons/MenuIcon';
-import { CloseIcon } from './icons/CloseIcon';
+import { MenuIcon } from '../icons/MenuIcon';
+import { CloseIcon } from '../icons/CloseIcon';
 import { MenuItems } from './MenuItems';
 import me from '/favicon-punk.svg';
-import { Project } from '../types';
+import { Project } from '../../types';
 
 interface MobileMenuProps {
   className?: string;

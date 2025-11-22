@@ -1,10 +1,10 @@
-import { WormholeLogo } from './logos/WormholeLogo';
-import { RockawayLogo } from './logos/RockawayLogo';
-import { SatoshilabsLogo } from './logos/SatoshilabsLogo';
-import { ObservatoryLogo } from './logos/ObservatoryLogo';
-import { MayanLogo } from './logos/MayanLogo';
-import { AztecLogo } from './logos/AztecLogo';
-// import { UniswapLogo } from './logos/UniswapLogo';
+import { WormholeLogo } from '../logos/WormholeLogo';
+import { RockawayLogo } from '../logos/RockawayLogo';
+import { SatoshilabsLogo } from '../logos/SatoshilabsLogo';
+import { ObservatoryLogo } from '../logos/ObservatoryLogo';
+import { MayanLogo } from '../logos/MayanLogo';
+import { AztecLogo } from '../logos/AztecLogo';
+// import { UniswapLogo } from '../logos/UniswapLogo';
 
 const aLogoClass =
   'hover:scale-[1.1] duration-100 transition-all grayscale opacity-40 hover:grayscale-0 hover:opacity-100';

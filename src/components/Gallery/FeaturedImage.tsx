@@ -1,6 +1,6 @@
-import { ProjectImage } from '../images';
-import { ExpandIcon } from './icons/ExpandIcon';
-import classes from './FeturedImage.module.css';
+import { ProjectImage } from '../../images';
+import { ExpandIcon } from '../icons/ExpandIcon';
+import classes from './FeaturedImage.module.css';
 import cx from 'clsx';
 
 const hoverClass = 'transition-all duration-250 hover:shadow-md';

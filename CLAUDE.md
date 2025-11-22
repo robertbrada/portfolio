@@ -23,3 +23,8 @@ Data validation
 
 Code formatting
 - Prefer early returns over nested if statements
+
+
+CSS
+- use css modules
+- use BEM className conventions

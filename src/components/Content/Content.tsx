@@ -1,15 +1,13 @@
 import 'react-medium-image-zoom/dist/styles.css';
-import { Project } from '../types';
-import { FeaturedImage } from './FeaturedImage';
-import { PersonalPage } from './PersonalPage';
+import { Project } from '../../types';
+import { FeaturedImage, Gallery } from '../Gallery';
+import { PersonalPage } from '../About';
 import { useEffect, useState } from 'react';
-import descriptions from '../descriptions';
-import images from '../images';
-import references from '../references';
-import { Gallery } from './Gallery';
-import { References } from './References';
+import descriptions from '../../descriptions';
+import images from '../../images';
+import references from '../../references';
+import { References, LogosSection } from '../References';
 import { ProfileSection } from './ProfileSection';
-import { LogosSection } from './LogosSection';
 
 interface ContentProps {
   selectedProject: Project;

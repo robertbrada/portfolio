@@ -1,6 +1,6 @@
 import { Link } from '@tanstack/react-router';
-import { Project } from '../types';
-import { getProjectSlug } from '../routeMapping';
+import { Project } from '../../types';
+import { getProjectSlug } from '../../routeMapping';
 
 interface ProjectItemProps {
   selected: boolean;
