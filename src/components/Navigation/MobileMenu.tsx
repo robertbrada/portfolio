@@ -31,7 +31,7 @@ export const MobileMenu = ({ selected }: MobileMenuProps) => {
         </div>
       </div>
       <div
-        className={`bg-text-primary bg-opacity-50 fixed inset-0 z-50 backdrop-blur-[1.5px] transition-opacity duration-300 ${
+        className={`bg-gray-900 bg-opacity-40 fixed inset-0 z-50 backdrop-blur-[2px] transition-opacity duration-300 ${
           opened ? 'opacity-100' : 'opacity-0 pointer-events-none'
         }`}
         onClick={() => setOpened(false)}
@@ -45,7 +45,10 @@ export const MobileMenu = ({ selected }: MobileMenuProps) => {
             setOpened(false);
           }}
         >
-          <div className="w-full flex justify-end px-3 py-2 border-b-[1px] h-[3rem] items-center">
+          <div className="w-full flex justify-between px-3 py-2 border-b-[1px] h-[3rem] items-center">
+            <span className="font-medium text-sm text-text-2 pl-2">
+              Projects Timeline
+            </span>
             <button
               onClick={() => setOpened(false)}
               className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
