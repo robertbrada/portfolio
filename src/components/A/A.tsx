@@ -16,7 +16,7 @@ interface AProps {
   project: Project;
   href: string;
   children: React.ReactNode;
-  className?: string
+  className?: string;
 }
 
 export const A = ({ project, href, children, className }: AProps) => {

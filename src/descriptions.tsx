@@ -4,7 +4,8 @@ import { LinkedinLogo } from './components/logos/LinkedinLogo';
 import { GithubLogo } from './components/logos/GithubLogo';
 import { XLogo } from './components/logos/XLogo';
 
-const aIconClass = 'inline-block transition-transform duration-200 hover:-translate-y-0.5';
+const aIconClass =
+  'inline-block transition-transform duration-200 hover:-translate-y-0.5';
 const iconHoverClasses = 'px-1 py-1';
 
 const descriptions: Record<Project, React.ReactNode> = {
