@@ -12,49 +12,49 @@ const dateClasses = 'font-bold text-xs px-2 mb-2 text-[#151515] lg:mt-8';
 const dateClassesWithMargin = 'font-bold text-xs px-2 mt-8 mb-2 text-[#151515]';
 
 const sharedClasses =
-  'my-1 py-0.5 pl-2 pr-2 rounded-xs text-left text-sm transition-all hover:font-medium duration-200 font-normal lg:my-1 lg:py-0.5 lg:pl-2 lg:pr-2 lg:text-sm lg:w-fit my-2 py-3 pl-4 pr-4 text-base';
+  'my-1 py-0.5 pl-2 pr-2 rounded-xs text-left text-sm transition-all duration-200 font-normal lg:my-1 lg:py-0.5 lg:pl-2 lg:pr-2 lg:text-sm lg:w-fit my-2 py-3 pl-4 pr-4 text-base';
 const sharedSelectedClasses = `${sharedClasses} font-medium text-white`;
 
 const classesByProject: Record<Project, { default: string; selected: string }> =
   {
     [Project.StakeBar]: {
-      default: `${styles.menuItem} ${styles['menuItem--stakebar']} ${sharedClasses} text-[#606d81] hover:text-stakebar-1`,
+      default: `${styles.menuItem} ${styles['menuItem--stakebar']} ${sharedClasses} text-[#606d81] lg:hover:font-medium lg:hover:text-stakebar-1`,
       selected: `${styles.menuItem} ${styles['menuItem--selected']} ${sharedSelectedClasses} bg-stakebar-1`,
     },
     [Project.Observatory]: {
-      default: `${styles.menuItem} ${styles['menuItem--observatory']} ${sharedClasses} text-[#606d81] hover:text-observatory-1`,
+      default: `${styles.menuItem} ${styles['menuItem--observatory']} ${sharedClasses} text-[#606d81] lg:hover:font-medium lg:hover:text-observatory-1`,
       selected: `${styles.menuItem} ${styles['menuItem--selected']} ${sharedSelectedClasses} bg-observatory-1`,
     },
     [Project.SDP]: {
-      default: `${styles.menuItem} ${styles['menuItem--sdp']} ${sharedClasses} text-[#606d81] hover:text-sdp-1`,
+      default: `${styles.menuItem} ${styles['menuItem--sdp']} ${sharedClasses} text-[#606d81] lg:hover:font-medium lg:hover:text-sdp-1`,
       selected: `${styles.menuItem} ${styles['menuItem--selected']} ${sharedSelectedClasses} bg-sdp-1`,
     },
     [Project.CrocoFinance]: {
-      default: `${styles.menuItem} ${styles['menuItem--croco']} ${sharedClasses} text-[#606d81] hover:text-croco-1`,
+      default: `${styles.menuItem} ${styles['menuItem--croco']} ${sharedClasses} text-[#606d81] lg:hover:font-medium lg:hover:text-croco-1`,
       selected: `${styles.menuItem} ${styles['menuItem--selected']} ${sharedSelectedClasses} bg-croco-1`,
     },
     [Project.Trezor]: {
-      default: `${styles.menuItem} ${styles['menuItem--trezor']} ${sharedClasses} text-[#606d81] hover:text-trezor-1`,
+      default: `${styles.menuItem} ${styles['menuItem--trezor']} ${sharedClasses} text-[#606d81] lg:hover:font-medium lg:hover:text-trezor-1`,
       selected: `${styles.menuItem} ${styles['menuItem--selected']} ${sharedSelectedClasses} bg-trezor-1`,
     },
     [Project.DuoCards]: {
-      default: `${styles.menuItem} ${styles['menuItem--duo']} ${sharedClasses} text-[#606d81] hover:text-duo-1`,
+      default: `${styles.menuItem} ${styles['menuItem--duo']} ${sharedClasses} text-[#606d81] lg:hover:font-medium lg:hover:text-duo-1`,
       selected: `${styles.menuItem} ${styles['menuItem--selected']} ${sharedSelectedClasses} bg-duo-1`,
     },
     [Project.Eigen]: {
-      default: `${styles.menuItem} ${styles['menuItem--eigen']} ${sharedClasses} text-[#606d81] hover:text-eigen-1`,
+      default: `${styles.menuItem} ${styles['menuItem--eigen']} ${sharedClasses} text-[#606d81] lg:hover:font-medium lg:hover:text-eigen-1`,
       selected: `${styles.menuItem} ${styles['menuItem--selected']} ${sharedSelectedClasses} bg-eigen-1`,
     },
     [Project.RobertBrada]: {
-      default: `${styles.menuItem} ${styles['menuItem--robert']} ${sharedClasses} text-[#606d81] hover:text-about-1`,
+      default: `${styles.menuItem} ${styles['menuItem--robert']} ${sharedClasses} text-[#606d81] lg:hover:font-medium lg:hover:text-about-1`,
       selected: `${styles.menuItem} ${styles['menuItem--selected']} ${sharedSelectedClasses} bg-about-1`,
     },
     [Project.Wormhole]: {
-      default: `${styles.menuItem} ${styles['menuItem--wormhole']} ${sharedClasses} text-[#606d81] hover:text-wormhole-1`,
+      default: `${styles.menuItem} ${styles['menuItem--wormhole']} ${sharedClasses} text-[#606d81] lg:hover:font-medium lg:hover:text-wormhole-1`,
       selected: `${styles.menuItem} ${styles['menuItem--selected']} ${sharedSelectedClasses} bg-wormhole-1`,
     },
     [Project.Mayan]: {
-      default: `${styles.menuItem} ${styles['menuItem--mayan']} ${sharedClasses} text-[#606d81] hover:text-mayan-1`,
+      default: `${styles.menuItem} ${styles['menuItem--mayan']} ${sharedClasses} text-[#606d81] lg:hover:font-medium lg:hover:text-mayan-1`,
       selected: `${styles.menuItem} ${styles['menuItem--selected']} ${sharedSelectedClasses} bg-mayan-1`,
     },
   };
