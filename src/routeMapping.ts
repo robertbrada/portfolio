@@ -12,6 +12,7 @@ export const projectToSlug: Record<Project, string> = {
   [Project.Eigen]: 'eigenbeat',
   [Project.Wormhole]: 'wormhole',
   [Project.Mayan]: 'mayan',
+  [Project.BlinkMate]: 'blinkmate',
 };
 
 // Reverse mapping: slug to Project enum

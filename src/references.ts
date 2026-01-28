@@ -116,6 +116,13 @@ const references: Record<Project, Reference[]> = {
       description: 'mayan.finance',
     },
   ],
+  [Project.BlinkMate]: [
+    {
+      type: 'web',
+      link: 'https://blinkmate.app/',
+      description: 'blinkmate.app',
+    },
+  ],
 };
 
 export default references;

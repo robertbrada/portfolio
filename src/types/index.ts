@@ -9,5 +9,6 @@ export enum Project {
   Eigen = 'EigenBeat',
   Wormhole = 'Wormhole',
   Mayan = 'Mayan Swap',
+  BlinkMate = 'BlinkMate',
   // Spark = "Spark",
 }

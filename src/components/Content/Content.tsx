@@ -24,6 +24,7 @@ const colorsByProject: Record<Project, string> = {
   [Project.Eigen]: 'text-eigen-1',
   [Project.Wormhole]: 'text-wormhole-1',
   [Project.Mayan]: 'text-mayan-1',
+  [Project.BlinkMate]: 'text-blinkmate-1',
 };
 
 export function Content({ selectedProject }: ContentProps) {
