@@ -57,6 +57,10 @@ const classesByProject: Record<Project, { default: string; selected: string }> =
       default: `${styles.menuItem} ${styles['menuItem--mayan']} ${sharedClasses} text-[#606d81] lg:hover:font-medium lg:hover:text-mayan-1`,
       selected: `${styles.menuItem} ${styles['menuItem--selected']} ${sharedSelectedClasses} bg-mayan-1`,
     },
+    [Project.BlinkMate]: {
+      default: `${styles.menuItem} ${styles['menuItem--blinkmate']} ${sharedClasses} text-[#606d81] lg:hover:font-medium lg:hover:text-blinkmate-1`,
+      selected: `${styles.menuItem} ${styles['menuItem--selected']} ${sharedSelectedClasses} bg-blinkmate-1`,
+    },
   };
 
 function getActiveClassName(selected: boolean, project: Project) {
@@ -85,7 +89,14 @@ interface MenuItemsProps {
 export const MenuItems = ({ selected }: MenuItemsProps) => {
   return (
     <section className="pt-2">
-      <div className={dateClasses}>2025</div>
+      <div className={dateClasses}>2026</div>
+      <ul>
+        <ProjectItem
+          name={Project.BlinkMate}
+          selected={selected === Project.BlinkMate}
+        />
+      </ul>
+      <div className={dateClassesWithMargin}>2025</div>
       <ul>
         <ProjectItem
           name={Project.Mayan}

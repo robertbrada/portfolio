@@ -40,6 +40,8 @@ export default {
         'wormhole-2': '#000000',
         'mayan-1': '#49a9f1',
         'mayan-2': '#3885FF',
+        'blinkmate-1': '#623CEA',
+        'blinkmate-2': '#8B6CF0',
         'text-1': '#2D3748',
         'text-2': '#606d81',
         'text-3': '#CBD5E0',

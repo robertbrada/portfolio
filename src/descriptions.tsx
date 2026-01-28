@@ -325,6 +325,27 @@ const descriptions: Record<Project, React.ReactNode> = {
       smart contracts and rebalances USDC and ETH between its wallets.
     </div>
   ),
+  [Project.BlinkMate]: (
+    <div>
+      <p>
+        BlinkMate is a free native macOS menu bar app I created to help combat
+        digital eye strain. It reminds users to follow the{' '}
+        <A
+          project={Project.BlinkMate}
+          href="https://www.aao.org/eye-health/tips-prevention/computer-usage"
+        >
+          20-20-20 rule
+        </A>{' '}
+        — every 20 minutes, look at something 20 feet away for 20 seconds.
+      </p>
+      <p className="mt-2">
+        The app features customizable break intervals, non-intrusive
+        notifications, and a clean interface that blends seamlessly with macOS
+        design standards. It's a small tool I built to protect eye health for
+        anyone spending extended hours working on a computer.
+      </p>
+    </div>
+  ),
 };
 
 export default descriptions;

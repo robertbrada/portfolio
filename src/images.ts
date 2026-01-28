@@ -25,6 +25,7 @@ import trezorEthTx from './assets/images/trezor/eth-transaction.png';
 import trezorWallet from './assets/images/trezor/wallet.png';
 import mayanApp from './assets/images/mayan/mayan-app.png';
 import wormholeApp from './assets/images/wormhole/wormhole-app.png';
+import blinkmateApp from './assets/images/blinkmate/blinkmate.webp';
 import { Project } from './types';
 
 export interface ProjectImage {
@@ -115,6 +116,7 @@ const images: Record<Project, ProjectImage[]> = {
   [Project.RobertBrada]: [],
   [Project.Wormhole]: [{ src: wormholeApp, border: false }],
   [Project.Mayan]: [{ src: mayanApp, border: false }],
+  [Project.BlinkMate]: [{ src: blinkmateApp, border: false }],
 };
 
 export default images;
