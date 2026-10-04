@@ -77,4 +77,12 @@
   .menuItem--blinkmate:hover::before {
     background-color: rgb(from theme('colors.blinkmate-1') r g b / 0.1);
   }
+
+  .menuItem--promptbar:hover::before {
+    background-color: rgb(from theme('colors.promptbar-1') r g b / 0.1);
+  }
+
+  .menuItem--macaway:hover::before {
+    background-color: rgb(from theme('colors.macaway-1') r g b / 0.1);
+  }
 }

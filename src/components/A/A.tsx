@@ -12,6 +12,8 @@ const colorClasses: Record<Project, string> = {
   [Project.Wormhole]: 'text-wormhole-1',
   [Project.Mayan]: 'text-mayan-2',
   [Project.BlinkMate]: 'text-blinkmate-2',
+  [Project.PromptBar]: 'text-promptbar-2',
+  [Project.MacAway]: 'text-macaway-2',
 };
 interface AProps {
   project: Project;

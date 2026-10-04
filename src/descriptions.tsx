@@ -328,21 +328,98 @@ const descriptions: Record<Project, React.ReactNode> = {
   [Project.BlinkMate]: (
     <div>
       <p>
-        BlinkMate is a free native macOS menu bar app I created to help combat
-        digital eye strain. It reminds users to follow the{' '}
+        Staring at a screen all day tires your eyes out. Eye doctors recommend
+        the{' '}
         <A
           project={Project.BlinkMate}
           href="https://www.aao.org/eye-health/tips-prevention/computer-usage"
         >
           20-20-20 rule
         </A>{' '}
-        — every 20 minutes, look at something 20 feet away for 20 seconds.
+        — every 20 minutes, look at something about 6 metres away for 20
+        seconds. Nobody remembers to do that, so BlinkMate does the remembering.
       </p>
       <p className="mt-2">
-        The app features customizable break intervals, non-intrusive
-        notifications, and a clean interface that blends seamlessly with macOS
-        design standards. It's a small tool I built to protect eye health for
-        anyone spending extended hours working on a computer.
+        It sits in the menu bar and nudges you when it's time. You choose how
+        often the breaks come, how long they last, and how hard the reminder is
+        to ignore: a quiet change of the menu bar icon, a normal macOS
+        notification, or a window in the middle of the screen. You also set your
+        working hours, so it stays quiet in the evening.
+      </p>
+      <p className="mt-2">
+        I built the app and the{' '}
+        <A project={Project.BlinkMate} href="https://blinkmate.app/">
+          landing page
+        </A>{' '}
+        myself. It's published on the{' '}
+        <A
+          project={Project.BlinkMate}
+          href="https://apps.apple.com/app/blinkmate/id6756325660"
+        >
+          Mac App Store
+        </A>
+        .
+      </p>
+    </div>
+  ),
+  [Project.PromptBar]: (
+    <div>
+      <p>
+        If you use{' '}
+        <A project={Project.PromptBar} href="https://claude.ai/">
+          Claude
+        </A>{' '}
+        or{' '}
+        <A project={Project.PromptBar} href="https://chatgpt.com/">
+          ChatGPT
+        </A>{' '}
+        daily, you end up retyping the same handful of instructions. PromptBar
+        keeps them in the macOS menu bar. One shortcut opens a search box on top
+        of whatever app you're in, you pick a prompt, and it's copied and ready
+        to paste.
+      </p>
+      <p className="mt-2">
+        Each prompt is an ordinary text file in a folder you choose, not a
+        hidden database. So the library stays readable and yours even if you
+        stop using the app — that's the main reason people trust a small tool
+        like this.
+      </p>
+      <p className="mt-2">
+        I did all of it alone: the native Mac app, the{' '}
+        <A project={Project.PromptBar} href="https://promptbar.app/">
+          landing page
+        </A>{' '}
+        and the store listing. It's published on the{' '}
+        <A
+          project={Project.PromptBar}
+          href="https://apps.apple.com/app/promptbar-menu-bar-prompts/id6799008305"
+        >
+          Mac App Store
+        </A>
+        .
+      </p>
+    </div>
+  ),
+  [Project.MacAway]: (
+    <div>
+      <p>
+        People leave their laptop open all the time — to order a coffee, to step
+        into a meeting. MacAway locks it for them. It watches the iPhone or
+        Apple Watch you already carry, and when that device moves too far away,
+        the Mac locks itself. If it can't tell where you are, it locks anyway.
+      </p>
+      <p className="mt-2">
+        Nothing gets installed on the phone, there's no account and no server.
+        The Mac measures the Bluetooth signal on its own. The tricky part was
+        that this signal jumps around constantly, so turning it into a reliable
+        "they walked away" decision took a lot of testing on real hardware.
+      </p>
+      <p className="mt-2">
+        I built the whole product end to end: the Mac app, the{' '}
+        <A project={Project.MacAway} href="https://macaway.app/">
+          landing page
+        </A>{' '}
+        and the checkout that sells and verifies licences.
       </p>
     </div>
   ),
