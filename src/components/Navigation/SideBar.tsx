@@ -21,7 +21,9 @@ export function SideBar({ selected }: SideBarProps) {
             </div>
           </Link>
         </section>
-        <MenuItems selected={selected} />
+        <div className="flex-1 min-h-0 overflow-y-auto">
+          <MenuItems selected={selected} />
+        </div>
       </div>
     </aside>
   );
