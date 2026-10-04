@@ -10,5 +10,7 @@ export enum Project {
   Wormhole = 'Wormhole',
   Mayan = 'Mayan Swap',
   BlinkMate = 'BlinkMate',
+  PromptBar = 'PromptBar',
+  MacAway = 'MacAway',
   // Spark = "Spark",
 }

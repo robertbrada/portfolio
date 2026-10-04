@@ -122,6 +122,30 @@ const references: Record<Project, Reference[]> = {
       link: 'https://blinkmate.app/',
       description: 'blinkmate.app',
     },
+    {
+      type: 'web',
+      link: 'https://apps.apple.com/app/blinkmate/id6756325660',
+      description: 'Mac App Store',
+    },
+  ],
+  [Project.PromptBar]: [
+    {
+      type: 'web',
+      link: 'https://promptbar.app/',
+      description: 'promptbar.app',
+    },
+    {
+      type: 'web',
+      link: 'https://apps.apple.com/app/promptbar-menu-bar-prompts/id6799008305',
+      description: 'Mac App Store',
+    },
+  ],
+  [Project.MacAway]: [
+    {
+      type: 'web',
+      link: 'https://macaway.app/',
+      description: 'macaway.app',
+    },
   ],
 };
 

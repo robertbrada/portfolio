@@ -25,7 +25,15 @@ import trezorEthTx from './assets/images/trezor/eth-transaction.png';
 import trezorWallet from './assets/images/trezor/wallet.png';
 import mayanApp from './assets/images/mayan/mayan-app.png';
 import wormholeApp from './assets/images/wormhole/wormhole-app.png';
-import blinkmateApp from './assets/images/blinkmate/blinkmate.webp';
+import blinkmateMenu from './assets/images/blinkmate/menu.webp';
+import blinkmateNotification from './assets/images/blinkmate/notification.webp';
+import blinkmateWorkingHours from './assets/images/blinkmate/working-hours.webp';
+import promptbarPanel from './assets/images/promptbar/panel.webp';
+import promptbarTags from './assets/images/promptbar/tags.webp';
+import promptbarClipboard from './assets/images/promptbar/clipboard.webp';
+import macawayLanding from './assets/images/macaway/landing.webp';
+import macawaySecurityMode from './assets/images/macaway/security-mode.webp';
+import macawayHowItWorks from './assets/images/macaway/how-it-works.webp';
 import { Project } from './types';
 
 export interface ProjectImage {
@@ -116,7 +124,60 @@ const images: Record<Project, ProjectImage[]> = {
   [Project.RobertBrada]: [],
   [Project.Wormhole]: [{ src: wormholeApp, border: false }],
   [Project.Mayan]: [{ src: mayanApp, border: false }],
-  [Project.BlinkMate]: [{ src: blinkmateApp, border: false }],
+  [Project.BlinkMate]: [
+    {
+      src: blinkmateMenu,
+      border: false,
+      description: 'Everything the app does fits in one menu bar dropdown',
+    },
+    {
+      src: blinkmateNotification,
+      border: false,
+      description:
+        'Three ways to be reminded: a menu bar icon change, a macOS notification, or a pop-up window',
+    },
+    {
+      src: blinkmateWorkingHours,
+      border: false,
+      description: 'Reminders only show up during the hours you actually work',
+    },
+  ],
+  [Project.PromptBar]: [
+    {
+      src: promptbarPanel,
+      border: false,
+      description: 'The panel opens over whatever app you are in',
+    },
+    {
+      src: promptbarTags,
+      border: false,
+      description: 'Prompts are grouped by tags you make up yourself',
+    },
+    {
+      src: promptbarClipboard,
+      border: false,
+      description:
+        'A prompt can pull in whatever you last copied, so you paste one finished text',
+    },
+  ],
+  [Project.MacAway]: [
+    {
+      src: macawayLanding,
+      border: true,
+      description: 'Landing page of macaway.app with the menu bar panel',
+    },
+    {
+      src: macawayHowItWorks,
+      border: true,
+      description: 'The landing page explains the idea in three steps',
+    },
+    {
+      src: macawaySecurityMode,
+      border: true,
+      description:
+        'Two presets decide how soon the Mac locks: relaxed at home, strict in public',
+    },
+  ],
 };
 
 export default images;

@@ -61,6 +61,14 @@ const classesByProject: Record<Project, { default: string; selected: string }> =
       default: `${styles.menuItem} ${styles['menuItem--blinkmate']} ${sharedClasses} text-[#606d81] lg:hover:font-medium lg:hover:text-blinkmate-1`,
       selected: `${styles.menuItem} ${styles['menuItem--selected']} ${sharedSelectedClasses} bg-blinkmate-1`,
     },
+    [Project.PromptBar]: {
+      default: `${styles.menuItem} ${styles['menuItem--promptbar']} ${sharedClasses} text-[#606d81] lg:hover:font-medium lg:hover:text-promptbar-1`,
+      selected: `${styles.menuItem} ${styles['menuItem--selected']} ${sharedSelectedClasses} bg-promptbar-1`,
+    },
+    [Project.MacAway]: {
+      default: `${styles.menuItem} ${styles['menuItem--macaway']} ${sharedClasses} text-[#606d81] lg:hover:font-medium lg:hover:text-macaway-1`,
+      selected: `${styles.menuItem} ${styles['menuItem--selected']} ${sharedSelectedClasses} bg-macaway-1`,
+    },
   };
 
 function getActiveClassName(selected: boolean, project: Project) {
@@ -91,6 +99,14 @@ export const MenuItems = ({ selected }: MenuItemsProps) => {
     <section className="pt-2">
       <div className={dateClasses}>2026</div>
       <ul>
+        <ProjectItem
+          name={Project.MacAway}
+          selected={selected === Project.MacAway}
+        />
+        <ProjectItem
+          name={Project.PromptBar}
+          selected={selected === Project.PromptBar}
+        />
         <ProjectItem
           name={Project.BlinkMate}
           selected={selected === Project.BlinkMate}
