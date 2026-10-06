@@ -36,13 +36,6 @@ const references: Record<Project, Reference[]> = {
       description: '@CrocoFinance',
     },
   ],
-  [Project.DuoCards]: [
-    {
-      type: 'web',
-      link: 'https://duocards.com/en/',
-      description: 'duocards.com',
-    },
-  ],
   [Project.Eigen]: [
     {
       type: 'web',

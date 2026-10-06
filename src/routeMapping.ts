@@ -8,7 +8,6 @@ export const projectToSlug: Record<Project, string> = {
   [Project.Observatory]: 'observatory',
   [Project.CrocoFinance]: 'croco-finance',
   [Project.Trezor]: 'trezor',
-  [Project.DuoCards]: 'duocards',
   [Project.Eigen]: 'eigenbeat',
   [Project.Wormhole]: 'wormhole',
   [Project.Mayan]: 'mayan',

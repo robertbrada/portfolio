@@ -38,10 +38,6 @@ const classesByProject: Record<Project, { default: string; selected: string }> =
       default: `${styles.menuItem} ${styles['menuItem--trezor']} ${sharedClasses} text-[#606d81] lg:hover:font-medium lg:hover:text-trezor-1`,
       selected: `${styles.menuItem} ${styles['menuItem--selected']} ${sharedSelectedClasses} bg-trezor-1`,
     },
-    [Project.DuoCards]: {
-      default: `${styles.menuItem} ${styles['menuItem--duo']} ${sharedClasses} text-[#606d81] lg:hover:font-medium lg:hover:text-duo-1`,
-      selected: `${styles.menuItem} ${styles['menuItem--selected']} ${sharedSelectedClasses} bg-duo-1`,
-    },
     [Project.Eigen]: {
       default: `${styles.menuItem} ${styles['menuItem--eigen']} ${sharedClasses} text-[#606d81] lg:hover:font-medium lg:hover:text-eigen-1`,
       selected: `${styles.menuItem} ${styles['menuItem--selected']} ${sharedSelectedClasses} bg-eigen-1`,
@@ -133,10 +129,6 @@ export const MenuItems = ({ selected }: MenuItemsProps) => {
         <ProjectItem
           name={Project.Eigen}
           selected={selected === Project.Eigen}
-        />
-        <ProjectItem
-          name={Project.DuoCards}
-          selected={selected === Project.DuoCards}
         />
       </ul>
       <div className={dateClassesWithMargin}>2023</div>
