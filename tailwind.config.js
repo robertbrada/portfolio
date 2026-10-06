@@ -32,8 +32,6 @@ export default {
         'croco-2': '#8fbe20',
         'trezor-1': '#000000',
         'trezor-2': '#03854D',
-        'duo-1': '#238CE5',
-        'duo-2': '#4ebbf2',
         'eigen-1': '#150958',
         'eigen-2': '#4a63e8',
         'wormhole-1': '#000000',

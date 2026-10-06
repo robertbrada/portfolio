@@ -71,23 +71,6 @@ const descriptions: Record<Project, React.ReactNode> = {
       </p>
     </div>
   ),
-  [Project.DuoCards]: (
-    <div>
-      This was a 2-day design project created in collaboration with the team
-      building the{' '}
-      <A project={Project.DuoCards} href="https://duocards.com/en/">
-        DuoCards
-      </A>{' '}
-      language-learning app. The task was to redesign the existing landing page
-      of{' '}
-      <A project={Project.DuoCards} href="https://duocards.com/en/">
-        duocards.com
-      </A>{' '}
-      to make it more appealing to users.
-      {/* I present it here as my attempt to
-      create something non-technical, outside of the crypto space.{" "} */}
-    </div>
-  ),
   [Project.Eigen]: (
     <div>
       <p>
@@ -220,47 +203,38 @@ const descriptions: Record<Project, React.ReactNode> = {
   [Project.RobertBrada]: (
     <div>
       <p>
-        {/* Happy to see you on my portfolio page!  */}
-        {/* I create wireframes in Figma, build the MVP and then I iterate on it as we see the needs. */}
-        I'm a software engineer from Prague. I joined the crypto community in
-        2018 after attending DevCon4 Ethereum conference. After university, I
-        worked in{' '}
+        I'm a software engineer from Prague who builds products end to end. I
+        started at{' '}
         <A project={Project.RobertBrada} href="https://satoshilabs.com/">
           SatoshiLabs
         </A>
-        , the inventor of{' '}
-        <A
-          project={Project.RobertBrada}
-          href="https://trezor.io/?gclsrc=aw.ds&&utm_source=google&gad_source=1&gad_campaignid=20810887858&gbraid=0AAAAAClLb_tFxu1eFC-IlIHAo3gOIiFPe&utm_medium=cpc&utm_campaign=PMax%20%7C%20Feed%20%7C%20CZ&utm_id=20800700799&gclid=CjwKCAjwravBBhBjEiwAIr30VM7Xp3xUJl7RC2c2El2LxjNkwpFBZa-9ZEXGWTvONWMC7SOQ6BWSxRoCMHgQAvD_BwE"
-        >
+        , the company behind the{' '}
+        <A project={Project.RobertBrada} href="https://trezor.io/">
           Trezor
         </A>{' '}
-        wallet. One year later, I joined{' '}
+        wallet, then spent four years as a founding engineer at{' '}
         <A project={Project.RobertBrada} href="https://rockawayx.com/">
           RockawayX
         </A>{' '}
-        as a founding member of its engineering division. We started developing
-        staking tools for Cosmos blockchains. Currently, we're running solvers
-        and bridging millions of USD value daily through{' '}
-        <A project={Project.RobertBrada} href="https://wormhole.com/">
-          Wormhole
-        </A>{' '}
-        and{' '}
-        <A project={Project.RobertBrada} href="https://mayan.finance/">
-          Mayan
-        </A>{' '}
-        cross-chain bridges.
-        {/* running staking services and own developer studio. */}
-        {/* I was a founding member of its developer studio */}
+        building data-heavy web apps.
       </p>
       <p className="mt-2">
-        I get driven by building products that are used by real people. This
-        site highlights work I've done on my own and in collaboration with my
-        great colleagues.
+        In August 2025 I joined{' '}
+        <A project={Project.RobertBrada} href="https://aztec.network/">
+          Aztec Labs
+        </A>
+        , where I work on{' '}
+        <A project={Project.RobertBrada} href="https://zkpassport.id/">
+          ZKPassport
+        </A>
+        . It verifies identity without revealing the passport, so you can prove
+        you're over 18 or a citizen of a given country and nothing else. On the
+        side I design and ship my own Mac apps: BlinkMate, PromptBar and
+        MacAway.
       </p>
       <p className="mt-2">
-        If you have an idea about possible collaboration, I would love to hear
-        about it. Leave me a message on{' '}
+        If you have an idea for a collaboration, I'd love to hear about it.
+        Leave me a message on{' '}
         <A project={Project.RobertBrada} href="https://x.com/0xrbrada">
           X
         </A>{' '}
@@ -328,16 +302,16 @@ const descriptions: Record<Project, React.ReactNode> = {
   [Project.BlinkMate]: (
     <div>
       <p>
-        Staring at a screen all day tires your eyes out. Eye doctors recommend
-        the{' '}
+        Staring at a screen all day tires your eyes out. The{' '}
         <A
           project={Project.BlinkMate}
           href="https://www.aao.org/eye-health/tips-prevention/computer-usage"
         >
           20-20-20 rule
         </A>{' '}
-        — every 20 minutes, look at something about 6 metres away for 20
-        seconds. Nobody remembers to do that, so BlinkMate does the remembering.
+        that eye doctors recommend says to look at something about 6 metres away
+        for 20 seconds every 20 minutes. Nobody remembers to do that, so
+        BlinkMate does the remembering.
       </p>
       <p className="mt-2">
         It sits in the menu bar and nudges you when it's time. You choose how
@@ -381,7 +355,7 @@ const descriptions: Record<Project, React.ReactNode> = {
       <p className="mt-2">
         Each prompt is an ordinary text file in a folder you choose, not a
         hidden database. So the library stays readable and yours even if you
-        stop using the app — that's the main reason people trust a small tool
+        stop using the app. That's the main reason people trust a small tool
         like this.
       </p>
       <p className="mt-2">
@@ -403,10 +377,11 @@ const descriptions: Record<Project, React.ReactNode> = {
   [Project.MacAway]: (
     <div>
       <p>
-        People leave their laptop open all the time — to order a coffee, to step
-        into a meeting. MacAway locks it for them. It watches the iPhone or
-        Apple Watch you already carry, and when that device moves too far away,
-        the Mac locks itself. If it can't tell where you are, it locks anyway.
+        People leave their laptop open all the time, whether they're ordering a
+        coffee or stepping into a meeting. MacAway locks it for them. It watches
+        the iPhone or Apple Watch you already carry, and when that device moves
+        too far away, the Mac locks itself. If it can't tell where you are, it
+        locks anyway.
       </p>
       <p className="mt-2">
         Nothing gets installed on the phone, there's no account and no server.

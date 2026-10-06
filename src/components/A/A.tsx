@@ -4,7 +4,6 @@ import { trackLinkClicked } from '../../analytics';
 const colorClasses: Record<Project, string> = {
   [Project.Trezor]: 'text-trezor-2',
   [Project.CrocoFinance]: 'text-croco-2',
-  [Project.DuoCards]: 'text-duo-2',
   [Project.Eigen]: 'text-eigen-2',
   [Project.Observatory]: 'text-observatory-2',
   [Project.SDP]: 'text-sdp-2',

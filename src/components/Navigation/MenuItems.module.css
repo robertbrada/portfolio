@@ -54,10 +54,6 @@
     background-color: rgb(from theme('colors.trezor-1') r g b / 0.1);
   }
 
-  .menuItem--duo:hover::before {
-    background-color: rgb(from theme('colors.duo-1') r g b / 0.1);
-  }
-
   .menuItem--eigen:hover::before {
     background-color: rgb(from theme('colors.eigen-1') r g b / 0.1);
   }

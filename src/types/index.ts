@@ -5,7 +5,6 @@ export enum Project {
   Observatory = 'Observatory',
   CrocoFinance = 'Croco Finance',
   Trezor = 'Trezor',
-  DuoCards = 'DuoCards',
   Eigen = 'EigenBeat',
   Wormhole = 'Wormhole',
   Mayan = 'Mayan Swap',

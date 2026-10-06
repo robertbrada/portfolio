@@ -3,9 +3,6 @@ import crocoLanding2 from './assets/images/croco/landing-2.png';
 import crocoPoolsV3 from './assets/images/croco/pools-v3.png';
 import crocoSimulatorV3 from './assets/images/croco/simulator-v3.png';
 import crocoSimulator from './assets/images/croco/simulator.png';
-import duoOriginal from './assets/images/duocards/original.png';
-import duoRedesignBlue from './assets/images/duocards/redesign-blue.png';
-import duoRedesign from './assets/images/duocards/redesign.png';
 import eigenNewsfeed from './assets/images/eigen/newsfeed.png';
 import eigenOperatorFutureLight from './assets/images/eigen/operator-future-light.png';
 import eigenServiceDark from './assets/images/eigen/service-dark.png';
@@ -75,24 +72,6 @@ const images: Record<Project, ProjectImage[]> = {
       src: crocoSimulatorV3,
       border: true,
       description: 'Simulator of the newer version supporting Uniswap v3',
-    },
-  ],
-  [Project.DuoCards]: [
-    {
-      src: duoRedesign,
-      border: false,
-      description: 'Redesigned landing page in green',
-    },
-    {
-      src: duoRedesignBlue,
-      border: false,
-      description: 'Redesigned landing page in blue',
-    },
-    {
-      src: duoOriginal,
-      border: true,
-      description:
-        'The existing landing page of duocards.com that should be redesigned',
     },
   ],
   [Project.Eigen]: [
