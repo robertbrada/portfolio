@@ -4,6 +4,7 @@ import { MediumLogo } from '../logos/MediumLogo';
 import { WebsiteIcon } from '../icons/WebsiteIcon';
 import { XLogo } from '../logos/XLogo';
 import { YouTubeLogo } from '../logos/YouTubeLogo';
+import { trackLinkClicked } from '../../analytics';
 
 type ReferenceType = 'github' | 'web' | 'loom' | 'youtube' | 'medium' | 'x';
 
@@ -37,7 +38,18 @@ export const References = ({ references }: ReferencesProps) => {
       </div>
       {references.map((reference, index) => (
         <li key={index} className="">
-          <a href={reference.link} target="_blank" className={aIconClass}>
+          <a
+            href={reference.link}
+            target="_blank"
+            className={aIconClass}
+            onClick={() =>
+              trackLinkClicked({
+                location: 'reference',
+                url: reference.link,
+                label: reference.description,
+              })
+            }
+          >
             {icons[reference.type]}
             <span className="text-sm">{reference.description}</span>
           </a>

@@ -1,6 +1,7 @@
 import { Link } from '@tanstack/react-router';
 import { Project } from '../../types';
 import { getProjectSlug } from '../../routeMapping';
+import { trackProjectOpened } from '../../analytics';
 import styles from './MenuItems.module.css';
 
 interface ProjectItemProps {
@@ -83,7 +84,11 @@ function ProjectItem({ selected, name }: ProjectItemProps) {
 
   return (
     <li>
-      <Link to={to} className={getActiveClassName(selected, name)}>
+      <Link
+        to={to}
+        className={getActiveClassName(selected, name)}
+        onClick={() => trackProjectOpened(name)}
+      >
         {name}
       </Link>
     </li>
