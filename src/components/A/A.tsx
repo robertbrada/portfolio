@@ -1,4 +1,5 @@
 import { Project } from '../../types';
+import { trackLinkClicked } from '../../analytics';
 
 const colorClasses: Record<Project, string> = {
   [Project.Trezor]: 'text-trezor-2',
@@ -27,6 +28,7 @@ export const A = ({ project, href, children, className }: AProps) => {
     <a
       href={href}
       target="_blank"
+      onClick={() => trackLinkClicked({ location: 'description', url: href })}
       className={`${colorClasses[project]} font-bold hover:underline inline-block transition-transform duration-200 hover:-translate-y-px ${className || ''}`}
     >
       {children}
